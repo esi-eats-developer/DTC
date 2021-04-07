@@ -21,51 +21,56 @@
 
         <!-- 웹 디자인 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/ajax.css">
+        <!-- <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ajax.css"> -->
+        <link rel="stylesheet" href="style.css">
 
         <!-- 웹 개발에 응용되는 cdn 및 javascript 파일 -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    
-        <script src="js/jquery.number.min.js"></script>
-        <script src="js/moment.min.js"></script>
-        <script src="js/common.js"></script>
-        <script src="js/ajax.js"></script>
-        <script src="js/headroom.min.js"></script>
-        <script src="js/fontawesome.js"></script>
-        <script>
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());
-            gtag("config","UA-120068916-1",{custom_map:{dimension1:"clientId",dimension2:"sessionId",dimension3:"mediaId"},optimize_id:"GTM-WTGT6MS"});
-            gtag("event","session_dimension",{sessionId:"f3d5455d-6201-4c22-a6e3-f996a62e8437",non_interaction:true});
-            gtag("event","media_dimension",{mediaId:"",non_interaction:true});
-            gtag("config","AW-787360686");
-        </script>
-        <script>
-            !function(k,b,f,n,e,m,l){if(k.fbq){return}e=k.fbq=function(){e.callMethod?e.callMethod.apply(e,arguments):e.queue.push(arguments)};
-            if(!k._fbq){k._fbq=e}e.push=e;e.loaded=!0;
-            e.version="2.0";
-            e.queue=[];
-            m=b.createElement(f);
-            m.async=!0;
-            m.src=n;l=b.getElementsByTagName(f)[0];
-            l.parentNode.insertBefore(m,l)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
-            fbq("init","2055296004544318");
-            fbq("track","PageView");
-        </script>
     </head>
 
     <body>
         <!-- 설문 시작 전 메인 페이지 -->
-        <div class="start"></div>
+        <article class="start">
+            <div class="survey-wrap">
+                <div class="survey-contents">
+                    <div class="survey-start">
+                        <div class="start-header">
+                            <!-- 로고 삽입 가능 -->
+                            <span class="icon"></span> 
+                            <h2>
+                                <span>건강기능식품 큐레이션 서비스</span>
+                                <br>
+                                "선물용 맞춤 상품"
+                            </h2>
+                        </div>
+                        <div class="start-info">
+                            <p>
+                            "몇 가지 질문에 답하고 "
+                            <br>
+                            "특별한 선물을 위한 맞춤 상품을 추천 받아보세요."
+                            <br>
+                            <br>
+                            <span>약 2분 정도 소요됩니다.</span>
+                            </p>
+                            <div class="btn-wrap">
+                                <a href="#" id="btn-start" class="btn btn-radius btn-dark" onclick="start();">시작하기</a>
+                                <p class="warning">* 질병의 진단 및 치료는 전문적인 의료기관을 이용하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
 
         <!-- 설문 페이지 -->
-        <div class="survey">
+        <article class="survey">
             <div class="survey-wrap">
                 <div class="survey-contents">
                     <div class="survey-test">
                         <!-- 설문 진행 단계를 보여주는 파트 - 선물 추천용에서는 필요하지 않을 수 있음 -->
-                        <nav class="survey-test-header">
+                        <!-- <nav class="survey-test-header">
                             <ul class="step-list-wrap">
                                 <li data="기본정보">
                                     <span>기본정보</span>
@@ -84,10 +89,10 @@
                                     ::after
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                         <!-- 프로그레스바 -->
                         <div class="survey-progress">
-                            <div id="survey-progress-rate" style="width: 3%;"></div>
+                            <div id="survey-progress-rate"></div>
                         </div>
                         <!-- 질문&답변 -->
                         <div class="survey-question-contents">
@@ -95,7 +100,7 @@
                                 <!-- 질문 번호 --><em id="qNum">질문 1</ㄷm>
                                 <!-- 질문 -->
                                 <h2 id="qTitle">
-                                    <p>필리가 고객님을 어떻게 부르면 좋을까요?</p>
+                                    <p>질문</p>
                                     <span></span>
                                 </h2>
                                 <p id="qContent"></p>
@@ -103,9 +108,9 @@
                                 <ul class="question-answer-wrap">
                                     <li>
                                         <div class="question-input-field">
-                                            <input type="radio" class="input-radio input-answer" name="answer" value="283" data-only="null" checked style="display: none;">
-                                            <input type="text" id="content" class="input-text input-small input-full" placeholder="이름" maxlength="10" required="true">
-
+                                            <input type="radio" class="input-radio input-answer" name="answer" value="283" data-only="null">
+                                            <input type="radio" class="input-radio input-answer" name="answer" value="283" data-only="null">
+                                            <!-- <input type="text" id="content" class="input-text input-small input-full" placeholder="이름" maxlength="10" required="true"> -->
                                         </div>
                                     </li>
                                 </ul>
@@ -120,352 +125,38 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    var _sUuid="";
-                    var _qUuid="";
-                    var _prevQUuid="";
-                    var _estimate=new Date();
-                    
-                    function errorClear(){$(".survey-errormsg").empty()}
-                    function errorPrint(a){$(".survey-errormsg").append('<i class="fas fa-exclamation-circle"></i> '+a)}
-                    
-                    $(function(){
-                        
-                        postSurvey();
-
-                        $(document).on("click","input[type=checkbox]:checked",function(a){
-                            if($("input[type=checkbox]:last").attr("data-only")==1){
-                                $("input[type=checkbox]:last:checked").prop("checked",false)
-                            }
-                        });
-
-                        $(document).on("click","input[type=checkbox]:checked",function(a){
-                            if($(this).attr("data-only")==1){
-                                $("input[type=checkbox]").prop("checked",false);
-                                $(this).prop("checked",true) 
-                            }
-                        });
-                        
-                        $(document).on("focus","input[type=text]",function(a){
-                            if($(this).attr("data-only")==1){
-                                $("input[type=checkbox]").prop("checked",false)
-                            }
-                            $("#content").parent().find("input").prop("checked",true)
-                        });
-
-                        $(document).on("keyup",function(a){
-                            if(a.keyCode==13){$("#btn-next").click()}
-                        });
-
-                        // 이 파트 정규 표현식 문제 있음 확인 필요
-                        $(document).on("click","#btn-next",function(g){
-                            errorClear();
-                            
-                            var a="";
-                            $(".input-answer:checked").each(function(){a+=","+$(this).val()});
-                            a=a.replace(/\,/,"");
-
-                            var f=new Date();
-                            var c="";
-
-                            if($("#content").parent().find("input").prop("checked")){
-                                c=$("#content").val()
-                            }
-
-                            var b=false;
-                            var h="답변을 입력해주세요.";
-                            var d=$("#qTitle").attr("maxAllowed");
-                            $(".input-text").each(function(){
-                                if($(this).attr("required")&&$(this).val()==""){b=true}
-                                if(!b){
-                                    var k=$(this).attr("placeholder");
-                                    var i=$(this).attr("type").toLowerCase();
-                                    // var j=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                                    var e=/^\d+$/;
-                                                
-                                    if(i=="tel"||i=="number"){
-                                        if(!e.test($(this).val())){b=true;h="숫자만 입력해주세요."}
-                                        else{
-                                            if(k=="나이"&&($(this).val()<10||$(this).val()>110)){
-                                                b=true;
-                                                h="10부터 110까지 입력가능합니다."
-                                            }
-                                            else{
-                                                if(k=="키"&&($(this).val()<100||$(this).val()>250)){
-                                                    b=true;h="100부터 250까지 입력가능합니다."
-                                                }
-                                                else{
-                                                    if(k=="몸무게"&&($(this).val()<30||$(this).val()>190)){
-                                                        b=true;
-                                                        h="30부터 190까지 입력가능합니다."
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    else{
-                                        if(k=="이메일"&&(!j.test(String($(this).val()).toLowerCase()))){
-                                            if($("#content").parent().find("input").prop("checked")){
-                                                b=true;
-                                                h="이메일을 확인해주세요."
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-                        });
-
-                        if(!b){
-                            if(d>1&&d<99){
-                                if(d<$("input[type=checkbox]:checked").length){
-                                    b=true;
-                                    h=d+"가지만 선택해 주세요."
-                                }
-                            }
-                        }
-
-                        if(b){
-                            errorPrint(h);
-                            $("#content").addClass("parsley-error");
-                            $("#content").focus()
-                        }
-                        else{
-                            $.ajax({
-                                method:"POST",
-                                url:"/api/survey/v2/"+_sUuid+"/q/"+_qUuid,
-                                data:{
-                                    answerIds:a,
-                                    estimatedTime:(f-_estimate),
-                                    content:c
-                                },
-                                success:function(e){
-                                    etag("survey","next","다음",0);
-                                    localStorage.setItem("survey["+_sUuid+"]["+_qUuid+"]",a);
-                                    localStorage.setItem("survey["+_sUuid+"]["+_qUuid+"][content]",c);
-                                    if(e.nextQuestionUuid!=null){
-                                        getQuestion(e.nextQuestionUuid);
-                                        history.pushState({qUuid:e.nextQuestionUuid},"prev question","/survey")
-                                    }
-                                    else{location.href="/survey/complete?sUuid="+_sUuid}
-                                },
-                                error:function(i,j,e){errorPrint("답변을 선택해주세요.")}
-                            })
-                        }
-                    });
-                        
-                    $(document).on("click","#btn-prev",function(a){prevQuestion()});
-                    $(window).on("popstate",function(a){prevQuestion()});
-
-                    function prevQuestion(){
-                        errorClear();
-                        if($("#qNum").html()!="질문 1"){
-                            $.ajax({
-                                method:"DELETE",
-                                url:"/api/survey/v2/"+_sUuid+"/q/"+_prevQUuid,
-                                success:function(a){
-                                    etag("survey","prev","이전",0);
-                                    getQuestion(_prevQUuid)
-                                }
-                            })
-                        }
-                        else{location.href="/survey"}
-                    }
-                    
-                    function postSurvey(){
-                        errorClear();
-                        $.ajax({
-                            method:"POST",
-                            url:"/api/survey/v2",
-                            data:{type:"PILLYV2"},
-                            success:function(a){_sUuid=a.uuid;getQuestion(a.nextQuestionUuid)}
-                        })
-                    }
-                    
-                    function getQuestion(a){
-                        $.ajax({
-                            method:"GET",
-                            url:"/api/survey/v2/"+_sUuid+"/q/"+a,
-                            success:function(i){
-                                _qUuid=a;_prevQUuid=i.prevQuestionUuid;
-                                $(".question-answer-wrap").empty();
-                                $(".step-list-wrap li").removeClass("on");
-                                $("#survey-progress-rate").css("width",i.progressRate+"%");
-                                var h=0;
-                                $(".step-list-wrap li").each(function(){
-                                    if(i.categoryTitle==$(this).attr("data")){
-                                        $(this).addClass("on");h++
-                                    }
-                                });
-                                if(h==0){
-                                    $(".step-list-wrap li").last().addClass("on")
-                                }
-                                $("#qTitle > span").removeClass();
-                                var b="";
-                                if(i.code!=null&&i.code.indexOf("DISCOMFORT_")>-1){
-                                    var e="icon-survey-question-"+i.code.split("_")[1].toLowerCase();
-                                    $("#qTitle").addClass("withicon");
-                                    $("#qTitle > span").addClass("icon "+e);
-                                    if(i.code=="DISCOMFORT_BLOOD"){b="혈관/혈액순환"}
-                                    else{
-                                        if(i.code=="DISCOMFORT_DIGESTION"){b="소화/장"}
-                                        else{
-                                            if(i.code=="DISCOMFORT_SKIN"){b="피부"}
-                                            else{
-                                                if(i.code=="DISCOMFORT_EYE"){b="눈"}
-                                                else{
-                                                    if(i.code=="DISCOMFORT_BRAIN"){b="두뇌활동"}
-                                                    else{
-                                                        if(i.code=="DISCOMFORT_FATIGUE"){b="피로감"}
-                                                        else{
-                                                            if(i.code=="DISCOMFORT_BONE"){b="뼈와 관절"}
-                                                            else{
-                                                                if(i.code=="DISCOMFORT_IMMUNE"){b="면역"}
-                                                                else{
-                                                                    if(i.code=="DISCOMFORT_HAIR"){b="모발"}
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    b=" &nbsp; | &nbsp; "+b
-                                }
-                                else{$("#qTitle").removeClass("withicon")}
-                                
-                                $("#qNum").html("질문 "+i.no+b);
-                                $("#qTitle > p").html(i.title);
-                                $("#qContent").html(i.content);
-                                $("#qTitle").attr("maxAllowed",i.answerCount);
-                                var c="radio";
-                                if(i.answerCount>1){c="checkbox"}
-                                $.each(i.answerItems,function(j,k){$(".question-answer-wrap").append(genAnswerCard(k,c,i.answerItems.length))});
-                                if(i.answerItems.length==1){$("#content").focus()}
-                                var g=localStorage.getItem("survey["+_sUuid+"]["+a+"]");
-                                var f=localStorage.getItem("survey["+_sUuid+"]["+a+"][content]");
-                                if(g!=null){
-                                    var d=g.split(",");
-                                    d.forEach(function(j){
-                                        $(".input-answer").each(function(){
-                                            if($(this).val()==j){
-                                                $(this).prop("checked",true)
-                                            }
-                                        });
-                                        $("#content").val(f)
-                                    })
-                                }
-                                if("EMAIL"==i.code){
-                                    $("#btn-next").html("결과보기");
-                                    $(".input-answer").first().prop("checked",true);
-                                    $(".input-text").first().focus()
-                                }
-                                else{$("#btn-next").html("다음")}
-                                _estimate=new Date();
-                                EmailDomainHelper.init($("[type=email]"))
-                            }
-                        })
-                    }
-                    
-                    function genAnswerCard(f,b,a){
-                        var e="";
-                        e+="<li>";
-                        if(f.textState==1){
-                            if(a==1){
-                                var c="text";
-                                var g='maxlength="10"';
-                                var d="";
-                                
-                                if(f.title=="나이"||f.title=="키"||f.title=="몸무게"){
-                                    c="tel";
-                                    if(f.title=="나이"){
-                                        g='maxlength="10" min="10" max="110"'
-                                    }
-                                    else{
-                                        if(f.title=="키"){
-                                            g='maxlength="10" min="100" max="250"';
-                                            d="cm"
-                                        }
-                                        else{
-                                            if(f.title=="몸무게"){
-                                                g='maxlength="10" min="30" max="190"';
-                                                d="kg"
-                                            }
-                                        }
-                                    }
-                                }
-                                else{
-                                    if(f.title=="이메일"){
-                                        c="email";
-                                        g='maxlength="100"'
-                                    }
-                                }
-                                e+='	<div class="question-input-field" style="padding-left: 0;">';
-                                e+='	<input type="'+b+'" class="input-'+b+' input-answer" name="answer" value="'+f.id+'" data-only="'+f.onlyState+'" checked style="display: none;" >';
-                                e+='	<input id="content" type="'+c+'" class="input-text input-small input-full" placeholder="'+f.title+'" '+g+' required="true">';
-                                if(d!=""){
-                                    e+='	<span class="unit">'+d+"</span>"
-                                }
-                                e+="	</div>"
-                            }
-                            else{
-                                e+='	<div class="question-input-field">';
-                                e+='	<label class="label-'+b+' label-question">';
-                                e+='		<input type="'+b+'" class="input-'+b+' input-answer" name="answer" value="'+f.id+'" data-only="'+f.onlyState+'">';
-                                e+="		<span></span>";
-                                e+="	</label>";
-                                e+='	<input id="content" type="text" class="input-text input-small input-full" data-only="'+f.onlyState+'" placeholder="'+f.title+'" maxlength="100">';
-                                e+="	</div>"
-                            }
-                        }
-                        else{
-                            e+='	<label class="label-'+b+' label-question">';
-                            e+='		<input type="'+b+'" class="input-'+b+' input-answer" name="answer" value="'+f.id+'" data-only="'+f.onlyState+'">';
-                            e+="		<span></span>";
-                            e+="		"+f.title;
-                            e+="	</label>"
-                        }
-                        e+="</li>";
-                        return e
-                    };
-                </script>
             </div>
-        </div>
-        <div class="ajaxloading"></div>
-        <span itemscope="" itemtype="http://schema.org/Organization">
-            <link itemprop="url" href="https://pilly.kr">
-            <a itemprop="sameAs" href="https://blog.naver.com/mypilly"></a>
-            <a itemprop="sameAs" href="https://www.facebook.com/pillykr"></a>
-            <a itemprop="sameAs" href="https://www.instagram.com/pilly_kr"></a>
-        </span>
-        <script type="text/javascript">
-            if(!wcs_add){
-                var wcs_add={}
+        </article>
+
+        <!-- 솔루션 페이지 -->
+        <article class="solution">
+        </article>
+
+        <input type="hidden" id="sex" value="0">
+        <input type="hidden" id="age" value="0">
+        <input type="hidden" id="career" value="0">
+        <input type="hidden" id="price" value="0">
+
+        <script type="text/javascript" src="./js/question.js"></script>
+        <script type="text/javascript" src="./js/solution.js"></script>
+        <script type="text/javascript" >
+            var num = 1;
+
+            function start(){
+                $(".start").hide();
+                $(".survey").show();
+                next();
             }
-            wcs_add.wa="s_568ae2e63b97";
-            if(!_nasa){
-                var _nasa={}
-            }
-            wcs.inflow();
-            wcs_do(_nasa);
-        </script>
-        <script>
-            $("form").keypress(function(c){
-                var d=$(this).attr("id");
-                if(!(d=="login-form"||d=="review-form")){
-                    if(c.which==13){return false}
+
+            function next(){
+                if(num < 5){
+                    $("#survey-progress-rate").attr("style", "width: calc(100/5*"+num+"%)");
+
+                    $("#qNum")
+
+                    num++;
                 }
-            });
-            $(document).on({
-                ajaxStart:function(){$("body").addClass("loading")},
-                ajaxStop:function(){$("body").removeClass("loading")}
-            });
-            $.ajaxSetup({beforeSend:function(d){
-                var e=$("meta[name='_csrf']").attr("content");
-                var f=$("meta[name='_csrf_header']").attr("content");
-                d.setRequestHeader(f,e)
-            }});
+            }
         </script>
-        <div id="criteo-tags-div" style="display: none;"></div>
     </body>
 </html>
