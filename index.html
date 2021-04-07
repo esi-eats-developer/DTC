@@ -91,13 +91,13 @@
                             </ul>
                         </nav> -->
                         <!-- 프로그레스바 -->
-                        <div class="survey-progress">
-                            <div id="survey-progress-rate"></div>
+                        <div class="progress survey-progress">
+                            <div id="survey-progress-rate" class="progress-bar" role="progressbar" style="width: calc(100/4*1%);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <!-- 질문&답변 -->
                         <div class="survey-question-contents">
                             <section class="question-section">
-                                <!-- 질문 번호 --><em id="qNum">질문 1</ㄷm>
+                                <!-- 질문 번호 --><p id="qNum">질문 1</p>
                                 <!-- 질문 -->
                                 <h2 id="qTitle">
                                     <p>질문</p>
@@ -108,9 +108,10 @@
                                 <ul class="question-answer-wrap">
                                     <li>
                                         <div class="question-input-field">
-                                            <input type="radio" class="input-radio input-answer" name="answer" value="283" data-only="null">
-                                            <input type="radio" class="input-radio input-answer" name="answer" value="283" data-only="null">
-                                            <!-- <input type="text" id="content" class="input-text input-small input-full" placeholder="이름" maxlength="10" required="true"> -->
+                                            <button id="A" type="button" class="btn btn-answer btn-radius">선택1</button>
+                                            <button id="B" type="button" class="btn btn-answer btn-radius">선택2</button>
+                                            <button id="C" type="button" class="btn btn-answer btn-radius">선택3</button>
+                                            <button id="D" type="button" class="btn btn-answer btn-radius">선택4</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -140,6 +141,9 @@
         <script type="text/javascript" src="./js/question.js"></script>
         <script type="text/javascript" src="./js/solution.js"></script>
         <script type="text/javascript" >
+
+            $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
+
             var num = 1;
 
             function start(){
@@ -148,15 +152,83 @@
                 next();
             }
 
-            function next(){
-                if(num < 5){
-                    $("#survey-progress-rate").attr("style", "width: calc(100/5*"+num+"%)");
-
-                    $("#qNum")
-
-                    num++;
+            $("#btn-prev").click(function() {
+                if(num != 1){back();}
+                if(num == 1){
+                    $(".survey").hide();
+                    $(".start").show();
                 }
+            });
+            $("#btn-next").click(function() {
+                if(num < 5){next();}
+                else if(num == 5){
+                    $(".survey").hide();
+                    $(".solution").show();
+                }
+            });
+
+            function next(){
+                console.log(num);
+                // 프로그레스 바 진행 현황 변경
+                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
+
+                $("#qNum").text("질문 "+num);
+                $("#qTitle").html(q[num]["title"]);
+
+                // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
+                if(q[num]["selectionNum"]==3){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: none");
+                }
+                else if(q[num]["selectionNum"]==4){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: ");
+                }
+                else{
+                    $("#C").attr("style", "display: none");
+                    $("#D").attr("style", "display: none");
+                }
+
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                $("#C").html(q[num]["C"]);
+                $("#D").html(q[num]["D"]);
+
+                num++;
+                console.log(num);
             }
+
+            function back(){
+                console.log(num);
+                // 프로그레스 바 진행 현황 변경
+                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+(num-1)+"%)");
+
+                $("#qNum").text("질문 "+ (num-1));
+                $("#qTitle").html(q[num-1]["title"]);
+
+                // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
+                if(q[num-1]["selectionNum"]==3){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: none");
+                }
+                else if(q[num-1]["selectionNum"]==4){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: ");
+                }
+                else{
+                    $("#C").attr("style", "display: none");
+                    $("#D").attr("style", "display: none");
+                }
+
+                $("#A").html(q[num-1]["A"]);
+                $("#B").html(q[num-1]["B"]);
+                $("#C").html(q[num-1]["C"]);
+                $("#D").html(q[num-1]["D"]);
+
+                num--;
+                console.log(num);
+            }
+
         </script>
     </body>
 </html>
