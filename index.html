@@ -199,6 +199,40 @@
                 num++;
             }
 
+            function recommendCategory(){
+                var age = localStorage.getItem("age");
+                var sex = localStorage.getItem("sex");
+                var category = "";
+
+                if(age == "청소년(10대)"){
+                    category = "A1MF";
+                }
+                else if(age == "청년(20-30대)"){
+                    category = "A2MF";
+                }
+                else if(age == "중장년(40-50대)"){
+                    if(sex == "남성"){
+                        category = "A3M"
+                    }
+
+                    if(sex == "여성"){
+                        category = "A3F"
+                    } 
+                }
+                else {
+                    category = "A4MF"
+                }
+
+                return category
+            };
+
+            function selectionNum(){
+                var category = recommendCategory();
+                var selectionNum = category["category"]["selectionNum"];
+
+                return selectionNum
+            }
+
             function next(){
                 // console.log(num);
                 if(num<=4){
@@ -208,8 +242,14 @@
                     $("#qNum").text("질문 "+num);
                     $("#qTitle").html(q[num]["title"]);
 
+                    if(num == 3){
+                        var selectionNum = selectionNum();
+                        q[num]["seletionNum"] = selectionNum;
+                    }
+
                     // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
-                    if(q[num]["selectionNum"]==3){
+                    if(q[num]["selectionNum"]==2){
+                        $(".C").attr("style", "display: none");
                         $(".D").attr("style", "display: none");
                         $(".E").attr("style", "display: none");
                     }
@@ -217,8 +257,6 @@
                         $(".E").attr("style", "display: none");
                     }
                     else{
-                        $(".C").attr("style", "display: none");
-                        $(".D").attr("style", "display: none");
                         $(".E").attr("style", "display: none");
                     }
 
@@ -228,9 +266,6 @@
                     $("#D").html(q[num]["D"]);
                     $("#E").html(q[num]["E"]);
                 }
-
-                
-                // console.log(num);
             }
 
             function saveAnswer(){

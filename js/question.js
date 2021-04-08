@@ -42,43 +42,6 @@ var category = {
     }
 }
 
-function recommendCategory(){
-    var age = localStorage.getItem("age");
-    var sex = localStorage.getItem("sex");
-    var category = "";
-
-    if(age == "청소년(10대)"){
-        category = "A1MF";
-    }
-    else if(age == "청년(20-30대)"){
-        category = "A2MF";
-    }
-    else if(age == "중장년(40-50대)"){
-        if(sex == "남성"){
-            category = "A3M"
-        }
-
-        if(sex == "여성"){
-            category = "A3F"
-        } 
-    }
-    else {
-        category = "A4MF"
-    }
-
-    return category
-};
-
-function selectionNum(){
-    var category = recommendCategory();
-    var selectionNum = category["category"]["selectionNum"];
-
-    return selectionNum
-}
-
-
-
-
 var q = {
     1: {
         "title": "선물 받으실 분의 성별을 선택해주세요.",
@@ -99,10 +62,12 @@ var q = {
     3: {
         "title": "선물하고자 하는 건강기능식품 카테고리를 선택해주세요.",
         "question-type": "category",
-        "selectionNum": selectionNum(),
-        "A": "학생/수험생",
-        "B": "사무직/실내 근로자",
-        "C": "실외 근로자"
+        "selectionNum": "0",
+        "A": "선택 1",
+        "B": "선택 2",
+        "C": "선택 3",
+        "D": "선택 4",
+        "E": "선택 5"
     },
     4: {
         "title": "원하시는 가격대가 있다면 선택해주세요.",
