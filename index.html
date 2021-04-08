@@ -224,16 +224,6 @@
                 }
 
                 return category
-            };
-
-            function setSelectionNum(){
-                var category = recommendCategory();
-                console.log(category);
-
-                var selectionNum = category[category]["selectionNum"];
-                console.log(selectionNum);
-
-                return selectionNum
             }
 
             function next(){
@@ -244,34 +234,51 @@
 
                     $("#qNum").text("질문 "+num);
                     $("#qTitle").html(q[num]["title"]);
-
-                    if(num == 3){
-                        var seletionNum = setSelectionNum();
-                        q[num]["seletionNum"] = selectionNum;
-                    }
-
-                    // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
-                    if(q[num]["selectionNum"]==2){
-                        $(".C").attr("style", "display: none");
-                        $(".D").attr("style", "display: none");
-                        $(".E").attr("style", "display: none");
-                    }
-                    else if(q[num]["selectionNum"]==3){
-                        $(".D").attr("style", "display: none");
-                        $(".E").attr("style", "display: none");
-                    }
-                    else if(q[num]["selectionNum"]==4){
-                        $(".E").attr("style", "display: none");
-                    }
-                    else{
-                    }
-
-                    $("#A").html(q[num]["A"]);
-                    $("#B").html(q[num]["B"]);
-                    $("#C").html(q[num]["C"]);
-                    $("#D").html(q[num]["D"]);
-                    $("#E").html(q[num]["E"]);
                 }
+
+                if(num == 3){
+                    var category = recommendCategory();
+                    console.log(category);
+
+                    var seletionNum = category[category]["selectionNum"];
+                    console.log(selectionNum);
+                    q[num]["seletionNum"] = selectionNum;
+                    console.log(q[num]["seletionNum"]);
+
+                    q[num]["A"] = category[category]["A"];
+                    q[num]["B"] = category[category]["B"];
+                    q[num]["C"] = category[category]["C"];
+                    q[num]["D"] = category[category]["D"];
+                    q[num]["E"] = category[category]["E"];
+
+                    conosle.log(q[num]["A"]);
+                    conosle.log(q[num]["B"]);
+                    conosle.log(q[num]["C"]);
+                    conosle.log(q[num]["D"]);
+                    conosle.log(q[num]["E"]);
+                }
+
+                // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
+                if(q[num]["selectionNum"]==2){
+                    $(".C").attr("style", "display: none");
+                    $(".D").attr("style", "display: none");
+                    $(".E").attr("style", "display: none");
+                }
+                else if(q[num]["selectionNum"]==3){
+                    $(".D").attr("style", "display: none");
+                    $(".E").attr("style", "display: none");
+                }
+                else if(q[num]["selectionNum"]==4){
+                    $(".E").attr("style", "display: none");
+                }
+                else{
+                }
+
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                $("#C").html(q[num]["C"]);
+                $("#D").html(q[num]["D"]);
+                $("#E").html(q[num]["E"]);
             }
 
             function saveAnswer(){
