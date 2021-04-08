@@ -17,7 +17,7 @@
 
         <title>탭에 표시될 문구 설정</title>
         <!-- 탭에 표시되는 작은 아이콘 설정 -->
-        <link rel="shortcut icon" href="./image/favicon.PNG"> 
+        <!-- <link rel="shortcut icon" href="./image/favicon.PNG">  -->
 
         <!-- 웹 디자인 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -108,10 +108,26 @@
                                 <ul class="question-answer-wrap">
                                     <li>
                                         <div class="question-input-field">
-                                            <button id="A" type="button" class="btn btn-answer btn-radius">선택1</button>
+                                            <div class="A">
+                                                <input type="radio" name="question-answer" value="selection1">
+                                                <label id="A" for="selection1">선택 1</label>
+                                            </div>
+                                            <div class="B">
+                                                <input type="radio" name="question-answer" value="selection2">
+                                                <label id="B" for="selection2">선택 2</label>
+                                            </div>
+                                            <div class="C">
+                                                <input type="radio" name="question-answer" value="selection3">
+                                                <label id="C" for="selection3">선택 3</label>
+                                            </div>
+                                            <div class="D">
+                                                <input type="radio" name="question-answer" value="selection4">
+                                                <label id="D" for="selection4">선택 4</label>
+                                            </div>
+                                            <!-- <button id="A" type="button" class="btn btn-answer btn-radius">선택1</button>
                                             <button id="B" type="button" class="btn btn-answer btn-radius">선택2</button>
                                             <button id="C" type="button" class="btn btn-answer btn-radius">선택3</button>
-                                            <button id="D" type="button" class="btn btn-answer btn-radius">선택4</button>
+                                            <button id="D" type="button" class="btn btn-answer btn-radius">선택4</button> -->
                                         </div>
                                     </li>
                                 </ul>
@@ -121,7 +137,7 @@
                         <div class="survey-errormsg"></div>
                         <!-- 하단 구성 -->
                         <div class="survey-question-footer">
-                            <button id="btn-prev" class="btn btn-radius">이전</button>
+                            <!-- <button id="btn-prev" class="btn btn-radius">이전</button> -->
                             <button id="btn-next" class="btn btn-radius btn-dark">다음</button>
                         </div>
                     </div>
@@ -139,6 +155,7 @@
         <input type="hidden" id="price" value="0">
 
         <script type="text/javascript" src="./js/question.js"></script>
+        <script type="text/javascript" src="./js/category.js"></script>
         <script type="text/javascript" src="./js/solution.js"></script>
         <script type="text/javascript" >
 
@@ -152,23 +169,36 @@
                 next();
             }
 
-            $("#btn-prev").click(function() {
-                if(num != 1){back();}
-                if(num == 1){
-                    $(".survey").hide();
-                    $(".start").show();
-                }
-            });
+            // $("#btn-prev").click(function() {
+            //     if(num != 1){back();}
+            //     if(num == 1){
+            //         $(".survey").hide();
+            //         $(".start").show();
+            //     }
+            // });
+
             $("#btn-next").click(function() {
-                if(num < 5){next();}
+                if(num < 5){
+                    console.log(num);
+                    next();
+                    saveAnswer();
+                    deselect();
+                    console.log(num);
+                }
                 else if(num == 5){
                     $(".survey").hide();
                     $(".solution").show();
                 }
             });
 
+            function deselect(){
+                $("input:radio[name='question-answer']").prop("checked", false);
+                num++;
+            }
+
             function next(){
-                console.log(num);
+                // console.log(num);
+
                 // 프로그레스 바 진행 현황 변경
                 $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
 
@@ -177,16 +207,16 @@
 
                 // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
                 if(q[num]["selectionNum"]==3){
-                    $("#C").attr("style", "display: ");
-                    $("#D").attr("style", "display: none");
+                    $(".C").attr("style", "display: ");
+                    $(".D").attr("style", "display: none");
                 }
                 else if(q[num]["selectionNum"]==4){
-                    $("#C").attr("style", "display: ");
-                    $("#D").attr("style", "display: ");
+                    $(".C").attr("style", "display: ");
+                    $(".D").attr("style", "display: ");
                 }
                 else{
-                    $("#C").attr("style", "display: none");
-                    $("#D").attr("style", "display: none");
+                    $(".C").attr("style", "display: none");
+                    $(".D").attr("style", "display: none");
                 }
 
                 $("#A").html(q[num]["A"]);
@@ -194,40 +224,62 @@
                 $("#C").html(q[num]["C"]);
                 $("#D").html(q[num]["D"]);
 
-                num++;
-                console.log(num);
+                // console.log(num);
             }
 
-            function back(){
-                console.log(num);
-                // 프로그레스 바 진행 현황 변경
-                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+(num-1)+"%)");
+            function saveAnswer(){
 
-                $("#qNum").text("질문 "+ (num-1));
-                $("#qTitle").html(q[num-1]["title"]);
-
-                // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
-                if(q[num-1]["selectionNum"]==3){
-                    $("#C").attr("style", "display: ");
-                    $("#D").attr("style", "display: none");
-                }
-                else if(q[num-1]["selectionNum"]==4){
-                    $("#C").attr("style", "display: ");
-                    $("#D").attr("style", "display: ");
-                }
-                else{
-                    $("#C").attr("style", "display: none");
-                    $("#D").attr("style", "display: none");
+                if(!window.localStorage){
+                    //모든 브라우저가 HTML5 로컬스토리지 지원해서 이 구문은 안 써도 됨.
+                    alert("현재 브라우저는 로컬스토리지를 지원하지 않습니다");
+                    return false;
                 }
 
-                $("#A").html(q[num-1]["A"]);
-                $("#B").html(q[num-1]["B"]);
-                $("#C").html(q[num-1]["C"]);
-                $("#D").html(q[num-1]["D"]);
+                console.log($("input:radio[name='question-answer']").is(":checked"));
+                
+                if($("input:radio[name='question-answer']").is(":checked")){
+                    var key = q[num]["question-type"];
+                    var radioID = $("input[name='question-answer']:checked").val();
+                    var radioNm = $("label[for='"+radioID+"']").text();
 
-                num--;
-                console.log(num);
-            }
+                    console.log(key);
+                    console.log(radioID);
+                    console.log(radioNm);
+                    
+                    localStorage.setItem(key, radioNm);
+                }
+            }    
+
+            // function back(){
+            //     console.log(num);
+            //     // 프로그레스 바 진행 현황 변경
+            //     $("#survey-progress-rate").attr("style", "width:calc(100/4*"+(num-1)+"%)");
+
+            //     $("#qNum").text("질문 "+ (num-1));
+            //     $("#qTitle").html(q[num-1]["title"]);
+
+            //     // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
+            //     if(q[num-1]["selectionNum"]==3){
+            //         $(".C").attr("style", "display: ");
+            //         $(".D").attr("style", "display: none");
+            //     }
+            //     else if(q[num-1]["selectionNum"]==4){
+            //         $(".C").attr("style", "display: ");
+            //         $(".D").attr("style", "display: ");
+            //     }
+            //     else{
+            //         $(".C").attr("style", "display: none");
+            //         $(".D").attr("style", "display: none");
+            //     }
+
+            //     $("#A").html(q[num-1]["A"]);
+            //     $("#B").html(q[num-1]["B"]);
+            //     $("#C").html(q[num-1]["C"]);
+            //     $("#D").html(q[num-1]["D"]);
+
+            //     num--;
+            //     console.log(num);
+            // }
 
         </script>
     </body>
