@@ -198,32 +198,32 @@
 
             function next(){
                 // console.log(num);
+                if(num<=4){
+                    // 프로그레스 바 진행 현황 변경
+                    $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
 
-                // 프로그레스 바 진행 현황 변경
-                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
+                    $("#qNum").text("질문 "+num);
+                    $("#qTitle").html(q[num]["title"]);
 
-                $("#qNum").text("질문 "+num);
-                $("#qTitle").html(q[num]["title"]);
+                    // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
+                    if(q[num]["selectionNum"]==3){
+                        $(".C").attr("style", "display: ");
+                        $(".D").attr("style", "display: none");
+                    }
+                    else if(q[num]["selectionNum"]==4){
+                        $(".C").attr("style", "display: ");
+                        $(".D").attr("style", "display: ");
+                    }
+                    else{
+                        $(".C").attr("style", "display: none");
+                        $(".D").attr("style", "display: none");
+                    }
 
-                // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
-                if(q[num]["selectionNum"]==3){
-                    $(".C").attr("style", "display: ");
-                    $(".D").attr("style", "display: none");
+                    $("#A").html(q[num]["A"]);
+                    $("#B").html(q[num]["B"]);
+                    $("#C").html(q[num]["C"]);
+                    $("#D").html(q[num]["D"]);
                 }
-                else if(q[num]["selectionNum"]==4){
-                    $(".C").attr("style", "display: ");
-                    $(".D").attr("style", "display: ");
-                }
-                else{
-                    $(".C").attr("style", "display: none");
-                    $(".D").attr("style", "display: none");
-                }
-
-                $("#A").html(q[num]["A"]);
-                $("#B").html(q[num]["B"]);
-                $("#C").html(q[num]["C"]);
-                $("#D").html(q[num]["D"]);
-
                 // console.log(num);
             }
 
