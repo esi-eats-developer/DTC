@@ -181,11 +181,9 @@
 
             $("#btn-next").click(function() {
                 if(num < 5){
-                    console.log(num);
                     saveAnswer();
                     deselect();
                     next();
-                    console.log(num);
 
                     if(num == 5){
                         $(".survey").hide();
@@ -228,13 +226,15 @@
 
             function next(){
                 if(num<=4){
+
+                    console.log("현재 num: "+num);
                     // 프로그레스 바 진행 현황 변경
                     $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
 
                     $("#qNum").text("질문 "+num);
                     $("#qTitle").html(q[num]["title"]);
 
-                    console.log(q[num]["selectionNum"]);
+                    console.log("선택지 개수: "+ q[num]["selectionNum"]);
 
                     if(num == 3){
                         var division = recommendCategory();
