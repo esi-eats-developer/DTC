@@ -184,11 +184,15 @@
                     deselect();
                     next();
                     console.log(num);
-                }
-                else if(num == 5){
-                    $(".survey").hide();
-                    $(".solution").show();
-                }
+
+                    if(num == 5){
+                        $(".survey").hide();
+                        $(".solution").show();
+                    }
+                // else if(num == 5){
+                //     $(".survey").hide();
+                //     $(".solution").show();
+                // }
             });
 
             function deselect(){
