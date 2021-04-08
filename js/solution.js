@@ -4,7 +4,7 @@ function goEland(){
 
     if(giftPrice == "전체"){giftPrice = "T"}
     if(giftPrice == "10만원 이상"){giftPrice = "H"}
-    if(gitfPrice == "10만원 미만"){giftPrice == "L"}
+    if(giftPrice == "10만원 미만"){giftPrice == "L"}
 
     if(giftCategory == "수면/스트레스"){giftCategory = "C1"}
     if(giftCategory == "눈"){giftCategory = "C2"}
