@@ -1,13 +1,13 @@
 var category = {
     // 10대(청소년)
-    A1MF : {
+    "A1MF" : {
         "selectionNum": 3,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "두뇌 활동"
     },
     // 2030(청년)
-    A2MF : {
+    "A2MF" : {
         "selectionNum": 5,
         "A" : "수면/스트레스",
         "B" : "눈",
@@ -16,7 +16,7 @@ var category = {
         "E" : "피부 관리"
     },
     // 4050(중장년) + 남성
-    A3M : {
+    "A3M" : {
         "selectionNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
@@ -24,7 +24,7 @@ var category = {
         "D" : "뼈/관절"
     },
     // 4050(중장년) + 여성
-    A3F : {
+    "A3F" : {
         "selectionNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
@@ -33,13 +33,13 @@ var category = {
         "E" : "여성 건강(갱년기)"
     },
     // 60대 이상(노년)
-    A4MF : {
+    "A4MF" : {
         "selectionNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "치아/잇몸",
         "D" : "뼈/관절"
-    },
+    }
 }
 
 function recommendCategory(){
@@ -67,7 +67,7 @@ function recommendCategory(){
     }
 
     return category
-}
+};
 
 function selectionNum(){
     var category = recommendCategory();
@@ -112,4 +112,4 @@ var q = {
         "B": "10만원 이상",
         "C": "전체"
     }
-}
+};
