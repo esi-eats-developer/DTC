@@ -179,11 +179,11 @@
 
             $("#btn-next").click(function() {
                 if(num < 5){
-                    console.log(num);
+                    // console.log(num);
                     next();
                     saveAnswer();
                     deselect();
-                    console.log(num);
+                    // console.log(num);
                 }
                 else if(num == 5){
                     $(".survey").hide();
@@ -242,9 +242,9 @@
                     var radioID = $("input[name='question-answer']:checked").val();
                     var radioNm = $("label[for='"+radioID+"']").text();
 
-                    console.log(key);
-                    console.log(radioID);
-                    console.log(radioNm);
+                    // console.log(key);
+                    // console.log(radioID);
+                    // console.log(radioNm);
                     
                     localStorage.setItem(key, radioNm);
                 }
