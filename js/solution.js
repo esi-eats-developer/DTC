@@ -23,7 +23,7 @@ function goEland(){
 var purchase = {
     // 수면/스트레스
     "C1" : {
-        "T" : "https://www.naver.com",
+        "T" : "https://www.naver.com/",
         "H" : "",
         "L" : ""
     },
