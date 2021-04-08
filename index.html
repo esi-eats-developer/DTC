@@ -166,6 +166,7 @@
             function start(){
                 $(".start").hide();
                 $(".survey").show();
+                next();
             }
 
             // $("#btn-prev").click(function() {
@@ -179,9 +180,9 @@
             $("#btn-next").click(function() {
                 if(num < 5){
                     // console.log(num);
-                    next();
                     saveAnswer();
                     deselect();
+                    next();
                     // console.log(num);
                 }
                 else if(num == 5){
