@@ -253,11 +253,14 @@
                         $(".D").attr("style", "display: none");
                         $(".E").attr("style", "display: none");
                     }
+                    else if(q[num]["selectionNum"]==3){
+                        $(".D").attr("style", "display: none");
+                        $(".E").attr("style", "display: none");
+                    }
                     else if(q[num]["selectionNum"]==4){
                         $(".E").attr("style", "display: none");
                     }
                     else{
-                        $(".E").attr("style", "display: none");
                     }
 
                     $("#A").html(q[num]["A"]);
