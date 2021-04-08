@@ -226,7 +226,6 @@
 
             function visibility(n){
                 var x = q[n]["selectionNum"];
-                console.log(x);
 
                 if(x == 2){
                     $("#C").attr("style", "display: none");
@@ -235,12 +234,21 @@
                 }
 
                 if(x == 3){
+                    $("#C").attr("style", "display: ");
                     $("#D").attr("style", "display: none");
                     $("#E").attr("style", "display: none");
                 }
 
                 if(x == 4){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: ");
                     $("#E").attr("style", "display: none");
+                }
+
+                if(x == 5){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: ");
+                    $("#E").attr("style", "display: ");
                 }
             }
 
