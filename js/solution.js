@@ -2,10 +2,6 @@ function goEland(){
     var giftCategory = localStorage.getItem("category");
     var giftPrice = localStorage.getItem("price");
 
-    if(giftPrice == "전체"){giftPrice = "T"}
-    if(giftPrice == "10만원 이상"){giftPrice = "H"}
-    if(giftPrice == "10만원 미만"){giftPrice == "L"}
-
     if(giftCategory == "수면/스트레스"){giftCategory = "C1"}
     if(giftCategory == "눈"){giftCategory = "C2"}
     if(giftCategory == "두뇌 활동"){giftCategory = "C3"}
@@ -20,7 +16,9 @@ function goEland(){
     console.log(giftPrice);
     console.log(purchase[giftCategory][giftPrice]);
 
-    location.href = purchase[giftCategory][giftPrice];
+    if(giftPrice == "전체"){location.href = purchase[giftCategory]["T"];}
+    if(giftPrice == "10만원 이상"){location.href = purchase[giftCategory]["H"];}
+    if(giftPrice == "10만원 미만"){location.href = purchase[giftCategory]["L"];}
 }
 
 var purchase = {
