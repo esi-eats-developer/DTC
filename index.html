@@ -224,6 +224,25 @@
                 return category
             }
 
+            function visibility(n){
+                var x = q[n]["selectionNum"];
+                console.log(x);
+
+                if(x == 2){
+                    $(".C").attr("style", "display: none");
+                    $(".D").attr("style", "display: none");
+                }
+
+                if(x == 3){
+                    $(".D").attr("style", "display: none");
+                    $(".E").attr("style", "display: none");
+                }
+
+                if(x == 4){
+                    $(".E").attr("style", "display: none");
+                }
+            }
+
             function next(){
                 if(num<=4){
 
@@ -251,12 +270,6 @@
                         q[num]["C"] = category[division]["W3"];
                         q[num]["D"] = category[division]["W4"];
                         q[num]["E"] = category[division]["W5"];
-
-                        console.log(q[num]["A"]);
-                        console.log(q[num]["B"]);
-                        console.log(q[num]["C"]);
-                        console.log(q[num]["D"]);
-                        console.log(q[num]["E"]);
                     }
 
                     $("#A").html(q[num]["A"]);
@@ -265,19 +278,7 @@
                     $("#D").html(q[num]["D"]);
                     $("#E").html(q[num]["E"]);
 
-                    // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
-                    if(q[num]["selectionNum"]==2){
-                        $(".C").attr("style", "display: none");
-                        $(".D").attr("style", "display: none");
-                        $(".E").attr("style", "display: none");
-                    }
-                    else if(q[num]["selectionNum"]==3){
-                        $(".D").attr("style", "display: none");
-                        $(".E").attr("style", "display: none");
-                    }
-                    else if(q[num]["selectionNum"]==4){
-                        $(".E").attr("style", "display: none");
-                    }
+                    visibility(num);
                 }
             }
 
