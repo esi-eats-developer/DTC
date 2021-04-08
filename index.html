@@ -124,6 +124,10 @@
                                                 <input type="radio" name="question-answer" value="selection4">
                                                 <label id="D" for="selection4">선택 4</label>
                                             </div>
+                                            <div class="E">
+                                                <input type="radio" name="question-answer" value="selection5">
+                                                <label id="E" for="selection5">선택 5</label>
+                                            </div>
                                             <!-- <button id="A" type="button" class="btn btn-answer btn-radius">선택1</button>
                                             <button id="B" type="button" class="btn btn-answer btn-radius">선택2</button>
                                             <button id="C" type="button" class="btn btn-answer btn-radius">선택3</button>
@@ -208,22 +212,23 @@
 
                     // 선택지의 개수에 따라, 버튼 display(보임 여부) 설정
                     if(q[num]["selectionNum"]==3){
-                        $(".C").attr("style", "display: ");
                         $(".D").attr("style", "display: none");
+                        $(".E").attr("style", "display: none");
                     }
                     else if(q[num]["selectionNum"]==4){
-                        $(".C").attr("style", "display: ");
-                        $(".D").attr("style", "display: ");
+                        $(".E").attr("style", "display: none");
                     }
                     else{
                         $(".C").attr("style", "display: none");
                         $(".D").attr("style", "display: none");
+                        $(".E").attr("style", "display: none");
                     }
 
                     $("#A").html(q[num]["A"]);
                     $("#B").html(q[num]["B"]);
                     $("#C").html(q[num]["C"]);
                     $("#D").html(q[num]["D"]);
+                    $("#E").html(q[num]["E"]);
                 }
 
                 
