@@ -242,6 +242,7 @@
 
                         var number = category[division]["answerNum"];
                         console.log("category["+division+"][answerNum]: "+number);
+
                         q[num]["seletionNum"] = number;
                         console.log("q[num][selectionNum]: "+q[num]["selectionNum"]);
                         
@@ -250,6 +251,12 @@
                         q[num]["C"] = category[division]["W3"];
                         q[num]["D"] = category[division]["W4"];
                         q[num]["E"] = category[division]["W5"];
+
+                        console.log(q[num]["A"]);
+                        console.log(q[num]["B"]);
+                        console.log(q[num]["C"]);
+                        console.log(q[num]["D"]);
+                        console.log(q[num]["E"]);
                     }
 
                     $("#A").html(q[num]["A"]);
