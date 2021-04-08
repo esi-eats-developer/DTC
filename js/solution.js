@@ -2,7 +2,7 @@
 var purchase = {
     // 수면/스트레스
     "C1" : {
-        "T" : "https://www.naver.com/",
+        "T" : "",
         "H" : "",
         "L" : ""
     },
