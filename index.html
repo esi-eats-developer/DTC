@@ -226,11 +226,13 @@
                 return category
             };
 
-            function selectionNum(){
+            function setSelectionNum(){
                 var category = recommendCategory();
                 console.log(category);
+
                 var selectionNum = category["category"]["selectionNum"];
                 console.log(selectionNum);
+
                 return selectionNum
             }
 
@@ -244,7 +246,7 @@
                     $("#qTitle").html(q[num]["title"]);
 
                     if(num == 3){
-                        var selectionNum = selectionNum();
+                        var seletionNum = setSelectionNum();
                         q[num]["seletionNum"] = selectionNum;
                     }
 
