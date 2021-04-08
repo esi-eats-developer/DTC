@@ -242,7 +242,7 @@
 
                         var number = category[division]["answerNum"];
                         console.log("category["+division+"][answerNum]"+number);
-                        q[num]["seletionNum"] = category[division]["answerNum"];
+                        q[num]["seletionNum"].write(category[division]["answerNum"]);
                         console.log("q[num][selectionNum]"+q[num]["selectionNum"]);
                         
                         q[num]["A"] = category[division]["W1"];
