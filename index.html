@@ -154,6 +154,7 @@
         </article> -->
 
         <script type="text/javascript" src="./js/question.js"></script>
+        <script type="text/javascript" src="./js/solution.js"></script>
         <script type="text/javascript" >
 
             $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
@@ -182,7 +183,7 @@
 
                     if(num == 5){
                         $(".survey").hide();
-                        $(".solution").show();
+                        goEland();
                     }
                 }
             });
@@ -249,8 +250,6 @@
 
             function next(){
                 if(num<=4){
-
-                    console.log("현재 num: "+num);
                     // 프로그레스 바 진행 현황 변경
                     $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
 
@@ -279,7 +278,6 @@
                     visibility(num);
                 }
             }
-
 
             function saveAnswer(){
 
