@@ -238,9 +238,13 @@
 
                     if(num == 3){
                         var division = recommendCategory();
-                        var number = category[division]["answerNum"];
-                        q[num]["seletionNum"] = number;
+                        console.log("division"+division);
 
+                        var number = category[division]["answerNum"];
+                        console.log("category["+division+"][answerNum]"+number);
+                        q[num]["seletionNum"] = number;
+                        conosole.log("q[num][selectionNum]"+q[num]["selectionNum"]);
+                        
                         q[num]["A"] = category[division]["W1"];
                         q[num]["B"] = category[division]["W2"];
                         q[num]["C"] = category[division]["W3"];
