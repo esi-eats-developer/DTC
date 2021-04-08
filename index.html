@@ -150,13 +150,8 @@
         </article>
 
         <!-- 솔루션 페이지 -->
-        <article class="solution">
-        </article>
-
-        <input type="hidden" id="sex" value="0">
-        <input type="hidden" id="age" value="0">
-        <input type="hidden" id="career" value="0">
-        <input type="hidden" id="price" value="0">
+        <!-- <article class="solution">
+        </article> -->
 
         <script type="text/javascript" src="./js/question.js"></script>
         <script type="text/javascript" >
@@ -262,17 +257,11 @@
                     $("#qNum").text("질문 "+num);
                     $("#qTitle").html(q[num]["title"]);
 
-                    console.log("선택지 개수: "+ q[num]["selectionNum"]);
-
                     if(num == 3){
                         var division = recommendCategory();
-                        console.log("division: "+division);
-
                         var number = category[division]["answerNum"];
-                        console.log("category["+division+"][answerNum]: "+number);
 
                         q[num]["seletionNum"] = number;
-                        console.log("q[num][selectionNum]: "+q[num]["selectionNum"]);
                         
                         q[num]["A"] = category[division]["W1"];
                         q[num]["B"] = category[division]["W2"];
