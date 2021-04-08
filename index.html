@@ -223,6 +223,8 @@
             function visibility(n){
                 var x = q[n]["selectionNum"];
 
+                console.log(x);
+
                 if(x == 2){
                     $("#C").attr("style", "display: none");
                     $("#D").attr("style", "display: none");
@@ -274,6 +276,7 @@
                     $("#selection4").html(q[num]["D"]);
                     $("#selection5").html(q[num]["E"]);
                 }
+
                 visibility(num);
             }
 
