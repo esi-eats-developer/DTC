@@ -235,20 +235,20 @@
                 $("#qTitle").html(q[num]["title"]);
 
                 if(num == 3){
-                    var category = recommendCategory();
-                    console.log(category);
-                    console.log(category[category]);
+                    var division = recommendCategory();
+                    console.log(division);
+                    console.log(category[division]);
 
-                    var number = category[category]["answerNum"];
+                    var number = category[division]["answerNum"];
                     console.log(number);
                     q[num]["seletionNum"] = number;
                     console.log(q[num]["seletionNum"]);
 
-                    q[num]["A"] = category[category]["A"];
-                    q[num]["B"] = category[category]["B"];
-                    q[num]["C"] = category[category]["C"];
-                    q[num]["D"] = category[category]["D"];
-                    q[num]["E"] = category[category]["E"];
+                    q[num]["A"] = category[division]["A"];
+                    q[num]["B"] = category[division]["B"];
+                    q[num]["C"] = category[division]["C"];
+                    q[num]["D"] = category[division]["D"];
+                    q[num]["E"] = category[division]["E"];
 
                     conosle.log(q[num]["A"]);
                     conosle.log(q[num]["B"]);
