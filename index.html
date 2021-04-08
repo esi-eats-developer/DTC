@@ -234,6 +234,8 @@
                     $("#qNum").text("질문 "+num);
                     $("#qTitle").html(q[num]["title"]);
 
+                    console.log(q[num]["selectionNum"]);
+
                     if(num == 3){
                         var division = recommendCategory();
                         var number = category[division]["answerNum"];
