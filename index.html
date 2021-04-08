@@ -227,22 +227,20 @@
             }
 
             function next(){
-                // console.log(num);
-                if(num<=4){
-                    // 프로그레스 바 진행 현황 변경
-                    $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
 
-                    $("#qNum").text("질문 "+num);
-                    $("#qTitle").html(q[num]["title"]);
-                }
+                    // 프로그레스 바 진행 현황 변경
+                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
+
+                $("#qNum").text("질문 "+num);
+                $("#qTitle").html(q[num]["title"]);
 
                 if(num == 3){
                     var category = recommendCategory();
                     console.log(category);
 
-                    var seletionNum = category[category]["selectionNum"];
-                    console.log(selectionNum);
-                    q[num]["seletionNum"] = selectionNum;
+                    var number = category[category]["selectionNum"];
+                    console.log(number);
+                    q[num]["seletionNum"] = number;
                     console.log(q[num]["seletionNum"]);
 
                     q[num]["A"] = category[category]["A"];
