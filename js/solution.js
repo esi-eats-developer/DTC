@@ -16,9 +16,9 @@ function goEland(){
     if(giftCategory == "여성 건강(갱년기)"){giftCategory = "C8"}
     if(giftCategory == "치아/잇몸"){giftCategory = "C9"}
 
+    console.log(giftCategory);
     console.log(giftPrice);
-    console.log(giftPrice);
-    console.log(purchase[giftPrice][giftPrice]);
+    console.log(purchase[giftCategory][giftPrice]);
 
     location.href = purchase[giftCategory][giftPrice];
 }
