@@ -1,14 +1,14 @@
 var category = {
     // 10대(청소년)
     "A1MF" : {
-        "selectionNum": 3,
+        "answerNum": 3,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "두뇌 활동"
     },
     // 2030(청년)
     "A2MF" : {
-        "selectionNum": 5,
+        "answerNum": 5,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "피로/간",
@@ -17,7 +17,7 @@ var category = {
     },
     // 4050(중장년) + 남성
     "A3M" : {
-        "selectionNum": 4,
+        "answerNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "피로/간",
@@ -25,7 +25,7 @@ var category = {
     },
     // 4050(중장년) + 여성
     "A3F" : {
-        "selectionNum": 4,
+        "answerNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "피로/간",
@@ -34,7 +34,7 @@ var category = {
     },
     // 60대 이상(노년)
     "A4MF" : {
-        "selectionNum": 4,
+        "answerNum": 4,
         "A" : "수면/스트레스",
         "B" : "눈",
         "C" : "치아/잇몸",
