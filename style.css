@@ -1,0 +1,23 @@
+/* css 폴더 내 파일 불러오기 */
+/* @import url("./css/"); */
+
+/* 전체 웹에 적용될 폰트 설정 */
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 전체 웹에 대해 폰트 적용 */
+body{
+    font-family:'NEXON Lv2 Gothic';
+    /* 단어 잘림 방지 */
+    word-break: keep-all;
+    display: flex;
+}
+
+/* ul-li 불릿 없애기 */
+ul{
+    list-style: none;
+}

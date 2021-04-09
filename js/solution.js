@@ -35,7 +35,7 @@ var c5 = {
 
 // 피부 관리
 var c6 = {
-    "T" : "https://www.elandmall.com/search/search.action?kwd=%EC%BD%9C%EB%9D%BC%EA%B2%90#hashPage1/kwd=%EC%BD%9C%EB%9D%BC%EA%B2%90&category_1depth=&category_2depth=1612309303&brand_nm=&brand_no=&vend_info=&size_info=&min_price=0&max_price=300000&min_rate=&max_rate=&color_info=&page_idx=1&pageSize=60&srchFd=null&sort=7&listType=image&applyStartDate=null&applyEndDate=null&dispStartDate=null&dispEndDate=null&newGoodsStartDate=null&newGoodsEndDate=null&mall_no=0000014&deliCostFreeYn=&filter_info=&quick_deli_poss_yn=&lot_deli_yn=&field_recev_poss_yn=&deliCostPoliNo=&price_chg_yn=N&",
+    "T" : "https://www.qualqual.co.kr/q/EziP5zxT",
     "H" : "",
     "L" : ""
 }
