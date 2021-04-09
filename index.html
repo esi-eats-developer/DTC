@@ -154,7 +154,7 @@
         </article> -->
 
         <script type="text/javascript" src="./js/question.js"></script>
-        <!-- <script type="text/javascript" src="./js/solution.js"></script> -->
+        <script type="text/javascript" src="./js/solution.js"></script>
         <script type="text/javascript" >
 
             $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
@@ -316,13 +316,26 @@
 
                 console.log(giftCategory);
                 console.log(giftPrice);
-                console.log(purchase);
-                console.log(purchase[giftCategory]);
-                console.log(purchase[giftCategory][giftPrice]);
-
-                if(giftPrice == "전체"){location.href = purchase[giftCategory]["전체"];}
-                if(giftPrice == "10만원 이상"){location.href = purchase[giftCategory]["10만원 이상"];}
-                if(giftPrice == "10만원 미만"){location.href = purchase[giftCategory]["10만원 미만"];}
+                
+                console.log(typeof(giftCategory));
+                console.log(giftCategory == "눈");
+                
+                if(giftCategory != "수면/스트레스"){
+                    console.log(c1);
+                    if(giftPrice == "전체"){
+                        console.log(c1.T);
+                        location.href = c1.T;
+                    }
+                    if(giftPrice == "10만원 이상"){
+                        console.log(c1.H);
+                        // location.href = c1.H;
+                    }
+                    if(giftPrice == "10만원 미만"){
+                        console.log(c1.L);
+                        // location.href = c1.L;
+                    }  
+                }
+                
             }
 
             // function back(){
