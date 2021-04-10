@@ -175,12 +175,12 @@
                         #<span class="sex">성별</span> #<span class="age">연령</span>
                         <br>
                         <h2 class="mt-2">
-                            <span class="name">이름</span>을 위한
+                            <span class="name">이름</span>님을 위한
                             <span style="color: blue;">'</span><span class="category" style="color: blue;">카테고리</span><span style="color: blue;">' 카테고리</span> 맞춤 선물이 준비되어 있어요!
                         </h2>
                     </div>
                     <div class="result-purchase mt-5">
-                        <button type="button" class="btn btn-lg btn-purchase">카카오톡으로 3초 만에 구매하기</button>
+                        <button type="button" class="btn btn-lg btn-purchase" onclick="goPurchase();">카카오톡으로 3초 만에 구매하기</button>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,6 @@
         <script type="text/javascript" src="./js/question.js"></script>
         <script type="text/javascript" src="./js/solution.js"></script>
         <script type="text/javascript" >
-
             $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
             $(".result").hide();
 
@@ -260,10 +259,6 @@
                         $(".result").show();
                         result();
                 }
-            });
-
-            $("#btn-purchase").click(function() {
-                goPurchase();
             });
 
             function deselect(){
