@@ -43,14 +43,19 @@ var category = {
 }
 
 var q = {
-    1: {
+    1:{
+        "title": "선물 받으실 분의 성함을 입력해주세요.",
+        "question-type": "name",
+        "selectionNum": 0
+    },
+    2: {
         "title": "선물 받으실 분의 성별을 선택해주세요.",
         "question-type": "sex",
         "selectionNum": 2,
         "A": "남성",
         "B": "여성"
     },
-    2: {
+    3: {
         "title": "선물 받으실 분의 연령대를 선택해주세요.",
         "question-type": "age",
         "selectionNum": 4,
@@ -59,7 +64,7 @@ var q = {
         "C": "중장년(40-50대)",
         "D": "노년(60대 이상)"
     },
-    3: {
+    4: {
         "title": "선물하고자 하는 건강기능식품 카테고리를 선택해주세요.",
         "question-type": "category",
         "selectionNum": "0",
@@ -69,7 +74,7 @@ var q = {
         "D": "선택 4",
         "E": "선택 5"
     },
-    4: {
+    5: {
         "title": "원하시는 가격대가 있다면 선택해주세요.",
         "question-type": "price",
         "selectionNum": 3,

@@ -1,0 +1,4 @@
+/* 응답을 입력하지 않을 경우 사용되는 에러 메시지 */
+.survey-errormsg{
+    color: red; 
+}
