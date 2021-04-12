@@ -178,9 +178,23 @@
                             <span class="name">이름</span>님을 위한
                             <span style="color: blue;">'</span><span class="category" style="color: blue;">카테고리</span><span style="color: blue;">' 카테고리</span> 맞춤 선물이 준비되어 있어요!
                         </h2>
+                        <img id="result-category-products" class="img-fluid mx-auto d-block mt-2" src="./image/sample-img.jpg" alt="result-category-products">
                     </div>
                     <div class="result-purchase mt-5">
                         <button type="button" class="btn btn-lg btn-purchase" onclick="goPurchase();">카카오톡으로 3초 만에 구매하기</button>
+                    </div>
+                    <div class="result-event text-center mt-5">
+                        <div class="result-event-info">
+                            <!-- 이벤트 관련 정보를 넣는 곳 
+                                : 텍스트, 광고용 카드 등 자유로운 형태로 삽입 가능 -->
+                        </div>
+                        <div class="result-event-join text-center mt-2">
+                            <h3>이벤트 참여하기!</h3>
+                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM1();">축하해요!</button>
+                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM2();">사랑해요!</button>
+                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM3();">감사해요!</button>
+                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM4();">건강해요!</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,18 +224,35 @@
                 $(".sex").html(sex);
                 $(".age").html(age);
                 $(".category").html(category);
+
+                if(category == "눈"){
+                    $("#result-category-products").attr("src", "image/"+c2.products);
+                }
+                else if(category == "두뇌 활동"){
+                    $("#result-category-products").attr("src", "image/"+c3.products);
+                }
+                else if(category == "피로/간"){
+                    $("#result-category-products").attr("src", "image/"+c4.products);
+                }
+                else if(category == "체지방/운동능력"){
+                    $("#result-category-products").attr("src", "image/"+c5.products);
+                }
+                else if(category == "피부 관리"){
+                    $("#result-category-products").attr("src", "image/"+c6.products);
+                }
+                else if(category == "뼈/관절"){
+                    $("#result-category-products").attr("src", "image/"+c7.products);
+                }
+                else if(category == "여성 건강(갱년기)"){
+                    $("#result-category-products").attr("src", "image/"+c8.products);
+                }
+                else if(category == "치아/잇몸"){
+                    $("#result-category-products").attr("src", "image/"+c9.products);
+                }
+                else{
+                    $("#result-category-products").attr("src", "image/"+c1.products);
+                }
             }
-
-            // 뒤로가기 버튼: 굳이 필요하지 않은 듯
-            // $("#btn-prev").click(function() {
-            //     if(num != 1){
-
-            //     }
-            //     if(num == 1){
-            //         $(".survey").hide();
-            //         $(".start").show();
-            //     }
-            // });
 
             function btnNext(){
                 saveAnswer();
@@ -394,129 +425,97 @@
                 let giftPrice = localStorage.getItem("price");
 
                 if(giftCategory == "눈"){
-                    console.log(c2);
                     if(giftPrice == "전체"){
-                        console.log(c2.T);
                         location.href = c2.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c2.H);
                         // location.href = c2.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c2.L);
                         // location.href = c2.L;
                     }  
                 }
                 
                 else if(giftCategory == "두뇌 활동"){
-                    console.log(c3);
                     if(giftPrice == "전체"){
-                        console.log(c3.T);
                         location.href = c3.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c3.H);
                         // location.href = c3.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c3.L);
                         // location.href = c3.L;
                     }  
                 }
 
                 else if(giftCategory == "피로/간"){
-                    console.log(c4);
                     if(giftPrice == "전체"){
-                        console.log(c4.T);
                         location.href = c4.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c4.H);
                         // location.href = c4.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c4.L);
                         // location.href = c4.L;
                     }  
                 }
 
                 else if(giftCategory == "체지방/운동능력"){
-                    console.log(c5);
                     if(giftPrice == "전체"){
-                        console.log(c5.T);
                         location.href = c5.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c5.H);
                         // location.href = c5.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c5.L);
                         // location.href = c5.L;
                     }  
                 }
 
                 else if(giftCategory == "피부 관리"){
-                    console.log(c6);
                     if(giftPrice == "전체"){
-                        console.log(c6.T);
                         location.href = c6.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c6.H);
                         // location.href = c6.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c6.L);
                         // location.href = c6.L;
                     }  
                 }
 
                 else if(giftCategory == "뼈/관절"){
-                    console.log(c7);
                     if(giftPrice == "전체"){
-                        console.log(c7.T);
                         location.href = c7.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c7.H);
                         // location.href = c7.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c7.L);
                         // location.href = c7.L;
                     }  
                 }
 
                 else if(giftCategory == "여성 건강(갱년기)"){
-                    console.log(c8);
                     if(giftPrice == "전체"){
-                        console.log(c8.T);
                         location.href = c8.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c8.H);
                         // location.href = c8.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c8.L);
                         // location.href = c8.L;
                     }  
                 }
 
                 else if(giftCategory == "치아/잇몸"){
-                    console.log(c9);
                     if(giftPrice == "전체"){
-                        console.log(c9.T);
                         location.href = c9.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c9.H);
                         // location.href = c9.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c9.L);
                         // location.href = c9.L;
                     }  
                 }
@@ -524,15 +523,12 @@
                 else{
                     console.log(c1);
                     if(giftPrice == "전체"){
-                        console.log(c1.T);
                         location.href = c1.T;
                     }
                     if(giftPrice == "10만원 이상"){
-                        console.log(c1.H);
                         // location.href = c1.H;
                     }
                     if(giftPrice == "10만원 미만"){
-                        console.log(c1.L);
                         // location.href = c1.L;
                     }
                 }
@@ -551,6 +547,27 @@
                 ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
 
                 Kakao.Link.sendCustom({templateId: Number(result[mbti]["kakao-share"])});
+                return false;
+            }
+        </script>
+        <script type="text/javascript">
+            // 축하해요!
+            const kakaoM1 = () => {
+                return false;
+            }
+
+            // 사랑해요!
+            const kakaoM2 = () => {
+                return false;
+            }
+
+            // 감사해요!
+            const kakaoM3 = () => {
+                return false;
+            }
+
+            // 건강해요!
+            const kakaoM4 = () => {
                 return false;
             }
         </script>
