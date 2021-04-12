@@ -62,7 +62,7 @@ var c8 = {
     "L" : ""
 }
 
-// 치아/잇몸
+// 면역/항산화
 var c9 = {
     "products": "sample-img.jpg",
     "T" : "https://www.elandmall.com/search/search.action?kwd=%EC%B9%98%EC%95%84+%EA%B1%B4%EA%B0%95#hashPage1/kwd=%EC%B9%98%EC%95%84%20%EA%B1%B4%EA%B0%95&category_1depth=&category_2depth=1612309303&brand_nm=&brand_no=&vend_info=&size_info=&min_price=1000&max_price=360000&min_rate=&max_rate=&color_info=&page_idx=1&pageSize=60&srchFd=null&sort=7&listType=image&applyStartDate=null&applyEndDate=null&dispStartDate=null&dispEndDate=null&newGoodsStartDate=null&newGoodsEndDate=null&mall_no=0000014&deliCostFreeYn=&filter_info=&quick_deli_poss_yn=&lot_deli_yn=&field_recev_poss_yn=&deliCostPoliNo=&price_chg_yn=N&",
