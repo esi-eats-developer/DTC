@@ -190,10 +190,52 @@
                         </div>
                         <div class="result-event-join text-center mt-2">
                             <h3>이벤트 참여하기!</h3>
-                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM1();">축하해요!</button>
-                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM2();">사랑해요!</button>
-                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM3();">감사해요!</button>
-                            <button type="button" class="btn btn-outline-primary btn-event" onclick="kakaoM4();">건강해요!</button>
+                            <div class="btnBox">
+                                <button type="button" class="btn btn-outline-primary popOpenBtnCmmn" data-num="1">생일 축하해요!</button>
+                                <button type="button" class="btn btn-outline-primary popOpenBtnCmmn" data-num="2">사랑해요!</button>
+                                <button type="button" class="btn btn-outline-primary popOpenBtnCmmn" data-num="3">감사해요!</button>
+                                <button type="button" class="btn btn-outline-primary popOpenBtnCmmn" data-num="4">건강하세요!</button>
+                            </div>
+                            <div id="popUp_1" class="popCmmn">
+                                <div class="popBg" data-num="1"></div>
+                                <div class="popInnerBox">
+                                    <div class="popHead">팝업1의 제목입니다.</div>
+                                    <div class="popBody">팝업1의 내용입니다.</div>
+                                    <div class="popFoot">
+                                        <button class="popCloseBtnCmmn" type="button" data-num="1">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="popUp_2" class="popCmmn">
+                                <div class="popBg" data-num="2"></div>
+                                <div class="popInnerBox">
+                                    <div class="popHead">팝업2의 제목입니다.</div>
+                                    <div class="popBody">팝업2의 내용입니다.</div>
+                                    <div class="popFoot">
+                                        <button class="popCloseBtnCmmn" type="button" data-num="2">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="popUp_3" class="popCmmn">
+                                <div class="popBg" data-num="3"></div>
+                                <div class="popInnerBox">
+                                    <div class="popHead">팝업3의 제목입니다.</div>
+                                    <div class="popBody">팝업3의 내용입니다.</div>
+                                    <div class="popFoot">
+                                        <button class="popCloseBtnCmmn" type="button" data-num="3">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="popUp_4" class="popCmmn">
+                                <div class="popBg" data-num="4"></div>
+                                <div class="popInnerBox">
+                                    <div class="popHead">팝업4의 제목입니다.</div>
+                                    <div class="popBody">팝업4의 내용입니다.</div>
+                                    <div class="popFoot">
+                                        <button class="popCloseBtnCmmn" type="button" data-num="4">확인</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -534,6 +576,28 @@
                 }
             }
         </script>
+        <script type="text/javascript">
+            window.onload(setPop());
+
+            // 팝업 세팅
+            function setPop() {
+                var popOpenBtn = $('.popOpenBtnCmmn');
+
+                //팝업 열기
+                $('.popBg, .popOpenBtn').on('click',function(){
+                    var clickNum = $(this).attr('data-num');
+                    
+                    $('#popUp_'+clickNum).fadeIn(200);
+                })
+
+                //팝업 닫기
+                $('.popBg, .popCloseBtnCmmn').on('click',function(){
+                    var clickNum = $(this).attr('data-num');
+                    
+                    $('#popUp_'+clickNum).fadeOut(200);
+                })
+            }
+        </script>
 
         <!-- 카카오 메시지 API 관련 -->
         <!-- 내용 변경 필요 -->
@@ -547,27 +611,6 @@
                 ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
 
                 Kakao.Link.sendCustom({templateId: Number(result[mbti]["kakao-share"])});
-                return false;
-            }
-        </script>
-        <script type="text/javascript">
-            // 축하해요!
-            const kakaoM1 = () => {
-                return false;
-            }
-
-            // 사랑해요!
-            const kakaoM2 = () => {
-                return false;
-            }
-
-            // 감사해요!
-            const kakaoM3 = () => {
-                return false;
-            }
-
-            // 건강해요!
-            const kakaoM4 = () => {
                 return false;
             }
         </script>
