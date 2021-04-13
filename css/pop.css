@@ -27,10 +27,10 @@
 }
 
 .modal {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   display: block;
-  margin: 50% 0 0 -200px;
+  margin: 50% 0 0 -150px;
   position: relative;
   top: 50%; 
   left: 50%;
@@ -40,7 +40,7 @@
 }
 
 .modal-wrapper.open .modal {
-  margin-top: -200px;
+  margin-top: -150px;
   opacity: 1;
 }
 
