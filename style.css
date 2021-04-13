@@ -25,3 +25,9 @@ body{
 
     margin: 0 auto;
 }
+
+.btn-normal{
+    background-color: #3A5FCB;
+    border: 0px;
+    color: white;
+}

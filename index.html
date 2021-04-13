@@ -74,7 +74,7 @@
                     <span>약 2분 정도 소요됩니다.</span>
                     </p>
                     <div class="btn-wrap">
-                        <a href="#" id="btn-start" class="btn btn-radius btn-dark mt-5" onclick="start();">시작하기</a>
+                        <a href="#" id="btn-start" class="btn btn-radius btn-normal mt-5" onclick="start();">시작하기</a>
                         <p class="warning mt-2">* 질병의 진단 및 치료는 전문적인 의료기관을 이용하세요.</p>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                     <div class="survey-errormsg mt-2" style="display: none;">※ 응답을 입력해주세요!</div>
                     <!-- 하단 구성 -->
                     <div class="survey-question-footer mt-5">
-                        <button id="btn-next" class="btn btn-radius btn-dark">다음</button>
+                        <button id="btn-next" class="btn btn-radius btn-normal">다음</button>
                     </div>
                 </div>
             </div>
@@ -155,26 +155,25 @@
                         <br>
                         <h2 class="mt-2">
                             <span class="name">이름</span>님을 위한
-                            <span style="color: blue;">'</span><span class="category" style="color: blue;">카테고리</span><span style="color: blue;">' 카테고리</span> 맞춤 선물이 준비되어 있어요!
+                            <span style="color: #3A5FCB;">'</span><span class="category" style="color: #3A5FCB;">카테고리</span><span style="color: #3A5FCB;">' 카테고리</span> 맞춤 선물이 준비되어 있어요!
                         </h2>
-                        <img id="result-category-products" class="img-fluid mx-auto d-block mt-2" src="./image/sample-img.jpg" alt="result-category-products">
+                        <img id="result-category-products" class="img-fluid mx-auto d-block mt-2" src="./image/c-sample-img.jpg" alt="result-category-products">
                     </div>
-                    <div class="result-purchase mt-5">
+                    <div class="result-purchase mt-2">
                         <button type="button" class="btn btn-lg btn-purchase" onclick="goPurchase();">카카오톡으로 3초 만에 구매하기</button>
                     </div>
                     <div class="result-event text-center mt-5">
                         <div class="result-event-info">
                             <!-- 이벤트 관련 정보를 넣는 곳 
                                 : 텍스트, 광고용 카드 등 자유로운 형태로 삽입 가능 -->
-                            <h5>이벤트 참여하기!</h5>
-                            <h5>이벤트 관련 안내를 여기에 추가할 예정</h5>
+                            <img class="img-fluid mx-auto d-block mt-2" src="./image/event.png" alt="hidden-event-img">
                         </div>
                         <div class="result-event-join text-center mt-2">
                             <div class="page-wrapper text-center mt-2">
-                                <button type="button" class="btn btn-dark trigger1">생일 축하해요!</button>
-                                <button type="button" class="btn btn-dark trigger2">사랑해요!</button>
-                                <button type="button" class="btn btn-dark trigger3">감사해요!</button>
-                                <button type="button" class="btn btn-dark trigger4">건강하세요!</button>
+                                <button type="button" class="btn btn-normal trigger1">축하해요!</button>
+                                <button type="button" class="btn btn-normal trigger2">사랑해요!</button>
+                                <button type="button" class="btn btn-normal trigger3">감사해요!</button>
+                                <button type="button" class="btn btn-normal trigger4">건강하세요!</button>
                             </div>
 
                             <!-- Modal1 생일 축하해요! -->
@@ -187,8 +186,9 @@
                                     </div>
                                     <div class="content">
                                         <div class="eventM1">
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM11();">생일 상장 1</button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();">생일 상장 2</button>
+                                            <span>여러분의 마음을 표현할 상장을 선택해주세요!</span>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM11();"><img class="event-img" src="./image/eventM11.png" alt=""></button>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();"><img class="event-img" src="./image/eventM12.png" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
@@ -204,8 +204,9 @@
                                     </div>
                                     <div class="content">
                                         <div class="eventM2">
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();">사랑 상장 1</button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();">사랑 상장 2</button>
+                                            <span>여러분의 마음을 표현할 상장을 선택해주세요!</span>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();"><img class="event-img" src="./image/eventM21.png" alt=""></button>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();"><img class="event-img" src="./image/eventM22.png" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
@@ -221,8 +222,9 @@
                                     </div>
                                     <div class="content">
                                         <div class="eventM3">
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();">감사 상장 1</button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();">감사 상장 2</button>
+                                            <span>여러분의 마음을 표현할 상장을 선택해주세요!</span>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();"><img class="event-img" src="./image/eventM31.png" alt=""></button>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();"><img class="event-img" src="./image/eventM32.png" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
@@ -238,8 +240,9 @@
                                     </div>
                                     <div class="content">
                                         <div class="eventM4">
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();">건강 상장 1</button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();">건강 상장 2</button>
+                                            <span>여러분의 마음을 표현할 상장을 선택해주세요!</span>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();"><img class="event-img" src="./image/eventM41.png" alt=""></button>
+                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();"><img class="event-img" src="./image/eventM42.png" alt=""></button>
                                         </div>
                                     </div>
                                 </div>

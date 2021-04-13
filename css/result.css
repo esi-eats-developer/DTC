@@ -9,10 +9,10 @@
 
 .btn-purchase {
     margin: 0 auto;
-    
-    border: 0;
+
     outline: 0;
 
-    color: 	#000000 85%;
-    background-color: FEE500;
+    border-color: #3A5FCB;
+    color: 	#3A5FCB;
+    background-color: white;
 }

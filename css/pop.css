@@ -27,10 +27,10 @@
 }
 
 .modal {
-  width: 300px;
+  width: 400px;
   height: 300px;
   display: block;
-  margin: 50% 0 0 -150px;
+  margin: 50% 0 0 -200px;
   position: relative;
   top: 50%; 
   left: 50%;
@@ -40,14 +40,14 @@
 }
 
 .modal-wrapper.open .modal {
-  margin-top: -150px;
+  margin-top: -200px;
   opacity: 1;
 }
 
 .head { 
   /* width: 90%; */
   /* height: px; */
-  padding: 10px 10px;
+  padding: 5px 5px;
   overflow: hidden;
   background: #fff;
 }
@@ -56,7 +56,7 @@
   font-size: 28px;
   display: block;
   float: right;
-  color: black;
+  color: #3A5FCB;;
 }
 
 .content {
@@ -66,4 +66,9 @@
 .btn-event{
   border: none;
   background-color: #fff;
+}
+
+.event-img{
+  width: 120px;
+  height: 160px;
 }
