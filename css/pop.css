@@ -49,14 +49,14 @@
   /* height: px; */
   padding: 5px 5px;
   overflow: hidden;
-  background: #fff;
+  background: #3A5FCB;
 }
 
 .btn-close {
   font-size: 28px;
   display: block;
   float: right;
-  color: #3A5FCB;;
+  color: #fff;
 }
 
 .content {
