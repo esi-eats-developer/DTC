@@ -2,6 +2,16 @@
     margin: 0 auto;
 }
 
+.category-card {
+    margin: 0 auto;
+    /* display: */
+}
+
+.card-title {
+    font-weight: bolder;
+    color:#3A5FCB;
+}
+
 
 .result-purchase {
     text-align: center;

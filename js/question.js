@@ -43,43 +43,40 @@ var category = {
 }
 
 var q = {
-    1:{
-        "title": "<b style='color: #3A5FCB'>선물 받으실 분</b>의 성함을 입력해주세요.",
-        "question-type": "name",
-        "selectionNum": 0
-    },
-    2: {
-        "title": "<b style='color: #3A5FCB'>선물 받으실 분</b>의 성별을 선택해주세요.",
+    1: {
+        "title": "<b style='color: #3A5FCB'>성별</b>을 선택해주세요.",
         "question-type": "sex",
         "selectionNum": 2,
         "A": "남성",
         "B": "여성"
     },
-    3: {
-        "title": "<b style='color: #3A5FCB'>선물 받으실 분</b>의 연령대를 선택해주세요.",
+    2: {
+        "title": "<b style='color: #3A5FCB'>연령대</b>를 선택해주세요.",
         "question-type": "age",
-        "selectionNum": 4,
-        "A": "청소년(10대)",
-        "B": "청년(20-30대)",
-        "C": "중장년(40-50대)",
-        "D": "노년(60대 이상)"
-    },
-    4: {
-        "title": "<b style='color: #3A5FCB'>선물하고자 하는</b> 건강기능식품 카테고리를 선택해주세요.",
-        "question-type": "category",
-        "selectionNum": "0",
-        "A": "선택 1",
-        "B": "선택 2",
-        "C": "선택 3",
-        "D": "선택 4",
-        "E": "선택 5"
-    },
-    5: {
-        "title": "원하시는 가격대가 있다면 선택해주세요.",
-        "question-type": "price",
         "selectionNum": 3,
-        "A": "10만원 미만",
-        "B": "10만원 이상",
-        "C": "전체"
+        "A": "청년(20-30대)",
+        "B": "중장년(40-50대)",
+        "C": "노년(60대 이상)"
+    },
+    3: {
+        "title": "<b style='color: #3A5FCB'>라이프스타일 키워드</b>를 선택해주세요.",
+        "question-type": "life",
+        "selectionNum": 5,
+        "A": "학생/수험생, 실내 근무",
+        "B": "실외 근무",
+        "C": "1인 가구",
+        "D": "활동러",
+        "E": "집콕러"
+    },
+    // 상품 가격 맞춰서 가격 계단 다시 설정할 것
+    4: {
+        "title": "원하시는 <b style='color: #3A5FCB'>가격대</b>가 있다면 선택해주세요.",
+        "question-type": "price",
+        "selectionNum": 5,
+        "A": "3만원 미만",
+        "B": "3만원 이상 5만원 미만",
+        "C": "5만원 이상 10만원 미만",
+        "D": "10만원 이상",
+        "E": "전체"
     }
 }

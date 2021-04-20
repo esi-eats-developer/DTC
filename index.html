@@ -2,12 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Eland ESI(외식, 바이오헬스케어)">
-
+        <meta name="author" content="이랜드 ESI(외식, 바이오&헬스케어)">
         <!-- 본 웹에 대한 설명 -->
         <meta name="keywords" content=""/>
         <meta name="description" content=""> 
-
         <!-- 링크 공유 시 보여지는 내용 설정 -->
         <meta property="og:type" content="website"> 
         <meta property="og:title" content="">
@@ -15,22 +13,23 @@
         <meta property="og:image" content="">
         <meta property="og:url" rel="canonical" content="">
 
-        <title>탭에 표시될 문구 설정</title>
-        <!-- 탭에 표시되는 작은 아이콘 설정 -->
-        <!-- <link rel="shortcut icon" href="./image/favicon.PNG">  -->
+        <title>이랜드 바이오&헬스케어</title>
+        <link rel="shortcut icon" href="./image/favicon.jpg"> 
 
-        <!-- 웹 디자인 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
 
-        <!-- 웹 개발에 응용되는 cdn 및 javascript 파일 -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
         <!-- 카카오 메시지 API 사용을 위한 설정 -->
         <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <script>Kakao.init('cfc81e62495a8be34ee51bcc44f563bf');</script>
+        <script> Kakao.init('cfc81e62495a8be34ee51bcc44f563bf'); </script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $(document).bind('keydown',function(e){
@@ -51,211 +50,212 @@
         </script>
     </head>
 
-    <body class="container-fluid">
-        <!-- 설문 시작 전 메인 페이지 -->
-        <article class="start container-fluid mt-5 text-center">
+    <body class="container-md">
+        <article class="start container-md mt-5"> <!-- 설문 시작 전 메인 페이지 -->
             <div class="survey-start">
                 <div class="start-header">
                     <!-- 로고 삽입 가능 -->
-                    <span class="icon"></span> 
-                    <h2 style="color: #3A5FCB">
-                        <b>
-                            <span>건강기능식품 큐레이션 서비스</span>
-                            <br>
-                            선물용 맞춤 상품
-                        </b>
-                    </h2>
+                    <!-- <span class="icon"></span> -->
+                    <h2><b style="color: #3A5FCB">건강기능식품<br>큐레이션 서비스</b></h2>
                 </div>
                 <div class="start-info mt-5">
                     <h5>
-                    몇 가지 질문에 답하고 
-                    <br>
-                    특별한 선물을 위한 맞춤 상품을 추천 받아요!
-                    <br>
-                    <br>
-                    <span>약 2분 정도 소요됩니다.</span>
+                        <span style="color: gray">이랜드 바이오&헬스케어 팀이 추천하는</span><br>
+                        고객 데이터 기반 맞춤형 <span style="color: #3A5FCB">#건강기능식품</span><br>
                     </h5>
-                    <div class="btn-wrap">
-                        <a href="#" id="btn-start" class="btn btn-radius btn-lg btn-normal mt-5" onclick="start();">시작하기</a>
-                        <p class="warning mt-2" style="color: gray">* 질병의 진단 및 치료는 전문적인 의료기관을 이용하세요.</p>
-                    </div>
+                    <h5 class="mt-5">
+                        <b>간단한 설문을 통해<br>성별/연령/라이프스타일에 딱 맞는<br>맞춤 상품을 추천 받아요!<br></b>
+                    </h5>
+                </div>
+                <button id="btn-start" class="btn btn-radius btn-lg btn-normal mt-5" type="button" onclick="start();">시작하기</button>
+                <div class="start-footer">
+                    <p class="warning mt-2" style="color: gray">* 질병의 진단 및 치료는 전문적인 의료기관을 이용하세요.</p>
                 </div>
             </div>
         </article>
 
-        <!-- 설문 페이지 -->
-        <article class="survey container-fluid mt-5">
-            <div class="survey-wrap">
-                <div class="survey-contents">
-                    <div class="survey-test">
-                        <!-- 프로그레스바 -->
-                        <div class="progress survey-progress">
-                            <div id="survey-progress-rate" class="progress-bar" role="progressbar" style="width: calc(100/5*1%);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <article class="survey container-md mt-5"> <!-- 설문 페이지 -->
+            <div class="survey-contents">
+                <div class="survey-test">
+                    <div class="progress survey-progress"> <!-- 프로그레스바 -->
+                        <div id="survey-progress-rate" class="progress-bar" role="progressbar" style="width: calc(100/4*1%);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="survey-question-contents"> <!-- 질문&답변 -->
+                        <div>
+                            <h6 id="qNum" class="mt-5">질문 1</h6> <!-- 질문 번호 -->
+                            <h3 id="qTitle" class="text-center"><p>질문</p></h3> <!-- 질문 -->
                         </div>
-                        <!-- 질문&답변 -->
-                        <div class="survey-question-contents">
-                            <section class="question-section">
-                                <div>
-                                    <!-- 질문 번호 -->
-                                    <p id="qNum" class="mt-5">질문 1</p>
-                                    <!-- 질문 -->
-                                    <h3 id="qTitle" class="text-center">
-                                        <p>질문</p>
-                                    </h3>
-                                    <p id="qSubTitle" class=" text-center mt-2" style="display:none">
-                                        <!-- 이랜드몰 고객 데이터 분석을 바탕으로,
-                                        <br> -->
-                                        #<span class="sex">성별</span> #<span class="age">연령</span> 이 가장 많이 선택한 건강고민이에요!
-                                    </p>
-                                    <p id="qContent"></p>
+                        <div class="question-answer-wrap mt-5 text-center "> <!-- 답변 -->
+                            <div class="question-answer-radio">
+                                <div id="A" class="form-check form-check-inline">
+                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection1">
+                                    <label class="form-check-label checkmark" id="selection1" for="selection1">선택 1</label>
                                 </div>
-                                <!-- 답변 -->
-                                <div class="question-answer-wrap mt-5 text-center">
-                                    <div class="question-answer-input">
-                                        <input type="text" class="form-control name" placeholder="이름">
-                                    </div>
-                                    <div class="question-answer-selection">
-                                        <div class="question-input-field">
-                                            <div id="A" class="form-check form-check-inline radio-container">
-                                                <input class="form-check-input" type="radio" name="question-answer" value="selection1">
-                                                <label class="form-check-label checkmark" id="selection1" for="selection1">선택 1</label>
-                                            </div>
-                                            <div id="B" class="form-check form-check-inline radio-container">
-                                                <input class="form-check-input" type="radio" name="question-answer" value="selection2">
-                                                <label class="form-check-label checkmark" id="selection2" for="selection2">선택 2</label>
-                                            </div>
-                                            <div id="C" class="form-check form-check-inline radio-container">
-                                                <input class="form-check-input" type="radio" name="question-answer" value="selection3">
-                                                <label class="form-check-label checkmark" id="selection3" for="selection3">선택 3</label>
-                                            </div>
-                                            <div id="D" class="form-check form-check-inline radio-container">
-                                                <input class="form-check-input" type="radio" name="question-answer" value="selection4">
-                                                <label class="form-check-label checkmark" id="selection4" for="selection4">선택 4</label>
-                                            </div>
-                                            <div id="E" class="form-check form-check-inline radio-container">
-                                                <input class="form-check-input" type="radio" name="question-answer" value="selection5">
-                                                <label class="form-check-label checkmark" id="selection5" for="selection5">선택 5</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div id="B" class="form-check form-check-inline">
+                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection2">
+                                    <label class="form-check-label checkmark" id="selection2" for="selection2">선택 2</label>
                                 </div>
-                            </section>
+                                <div id="C" class="form-check form-check-inline">
+                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection3">
+                                    <label class="form-check-label checkmark" id="selection3" for="selection3">선택 3</label>
+                                </div>
+                                <div id="D" class="form-check form-check-inline">
+                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection4">
+                                    <label class="form-check-label checkmark" id="selection4" for="selection4">선택 4</label>
+                                </div>
+                                <div id="E" class="form-check form-check-inline">
+                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection5">
+                                    <label class="form-check-label checkmark" id="selection5" for="selection5">선택 5</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- 에러 메시지 -->
-                    <div class="survey-errormsg mt-2" style="display: none;">※ 응답을 입력해주세요!</div>
-                    <!-- 하단 구성 -->
-                    <div class="survey-question-footer mt-5">
-                        <button id="btn-next" class="btn btn-radius btn-normal">다음</button>
-                    </div>
+                </div>
+                <div class="survey-errormsg mt-2" style="display: none;">※ 응답을 입력해주세요!</div>
+                <div class="survey-footer mt-5">
+                    <button id="btn-next" class="btn btn-radius btn-normal">다음</button>
                 </div>
             </div>
         </article>
 
-        <!--  마지막 페이지 -->
-        <article class="result container-fluid">
-            <div class="result-wrap">
-                <div class="result-content">
-                    <div class="result-info mt-5">
-                        #<span class="sex">성별</span> #<span class="age">연령</span>
-                        <br>
-                        <h2 class="mt-2">
-                            <span class="name">이름</span>님께 선물할
-                            <b><span style="color: #3A5FCB;">'</span><span class="category" style="color: #3A5FCB;">카테고리</span><span style="color: #3A5FCB;">' 카테고리</b></span> 맞춤 상품이 준비되어 있어요!
-                        </h2>
-                        <!-- <img id="result-category-products" class="img-fluid mx-auto d-block mt-5" src="./image/c-sample-img.jpg" alt="result-category-products"> -->
-                    </div>
-                    <div class="result-purchase mt-5">
-                        <button type="button" class="btn btn-lg btn-purchase" onclick="goPurchase();">카카오톡으로 3초 만에 구매하기</button>
-                    </div>
-                    <div class="result-event text-center mt-5">
-                        <div class="result-event-info">
-                            <!-- 이벤트 관련 정보를 넣는 곳 
-                                : 텍스트, 광고용 카드 등 자유로운 형태로 삽입 가능 -->
-                            <img class="img-fluid mx-auto d-block mt-2" src="./image/event.png" alt="hidden-event-img">
+        <article class="result container-md"> <!--  결과 페이지 -->
+            <div class="result-content">
+                <div class="result-info mt-5">
+                    <h5>
+                        #<span class="sex">성별</span> #<span class="age">연령</span> #<span class="life">라이프스타일</span>
+                    </h5>
+                    <h2 class="mt-2">
+                        <span style="color: #3A5FCB"><b>맞춤 상품</b></span>이 준비되어 있어요!
+                    </h2>
+                </div>
+                <div class="category-card mt-5">
+                    <div class="card mt-2">
+                        <img src="./image/banner/003.png" class="card-img-top" alt="card1">
+                        <div class="card-body">
+                            <h5 class="card-title">면역력 증진</h5>
+                            <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
                         </div>
-                        <div class="result-event-join text-center mt-2">
-                            <div class="page-wrapper text-center mt-2">
-                                <p>히든 이벤트 참여를 희망하신다면,<br>
-                                    아래 테마 중 하나를 선택해주세요 :) </p>
-                                <button type="button" class="btn btn-normal trigger1">축하해요!</button>
-                                <button type="button" class="btn btn-normal trigger2">사랑해요!</button>
-                                <button type="button" class="btn btn-normal trigger3">감사해요!</button>
-                                <button type="button" class="btn btn-normal trigger4">건강하세요!</button>
-                            </div>
-
-                            <!-- Modal1 생일 축하해요! -->
-                            <div id="modal-wrapper1" class="modal-wrapper">
-                                <div class="modal container-fluid">
-                                    <div class="head">
-                                        <a class="btn-close trigger1" href="#">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="eventM1">   
-                                            <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                            <button type="button" class="btn btn-outline-dark btn-event mt-1" onclick="kakaoEventM11();"><img class="event-img" src="./image/eventM11.png" alt=""></button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();"><img class="event-img" src="./image/eventM12.png" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal2 사랑해요! -->
-                            <div id="modal-wrapper2" class="modal-wrapper">
-                                <div class="modal container-fluid">
-                                    <div class="head">
-                                        <a class="btn-close trigger2" href="#">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="eventM2">
-                                            <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();"><img class="event-img" src="./image/eventM21.png" alt=""></button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();"><img class="event-img" src="./image/eventM22.png" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal3 감사해요! -->
-                            <div id="modal-wrapper3" class="modal-wrapper">
-                                <div class="modal container-fluid">
-                                    <div class="head">
-                                        <a class="btn-close trigger3" href="#">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="eventM3">
-                                            <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();"><img class="event-img" src="./image/eventM31.png" alt=""></button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();"><img class="event-img" src="./image/eventM32.png" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal4 건강하세요! -->
-                            <div id="modal-wrapper4" class="modal-wrapper">
-                                <div class="modal container-fluid">
-                                    <div class="head">
-                                        <a class="btn-close trigger4" href="#">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="eventM4">
-                                            <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();"><img class="event-img" src="./image/eventM41.png" alt=""></button>
-                                            <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();"><img class="event-img" src="./image/eventM42.png" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>핵심 영양성분: </b>홍삼</li>
+                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
                         </div>
+                    </div>
+                    <div class="card mt-2">
+                        <img src="./image/banner/005.png" class="card-img-top" alt="card2">
+                        <div class="card-body">
+                            <h5 class="card-title">피로 회복</h5>
+                            <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>핵심 영양성분: </b>밀크씨슬</li>
+                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <img src="./image/banner/001.png" class="card-img-top" alt="card3">
+                        <div class="card-body">
+                            <h5 class="card-title">눈 건강</h5>
+                            <p class="card-text">비대면 수업, 재택근무, 유튜브 시청 .. 디지털 콘텐츠 시청 시간이 늘어나면서 눈 보호가 필요해졌어요!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>핵심 영양성분: </b>루테인</li>
+                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-purchase">
+                    <button type="button" class="btn btn-lg btn-purchase mt-5" onclick="goPurchase();">전체 상품 한 눈에 보기</button>
+                </div>
+                <div class="result-event text-center mt-5">
+                    <div class="result-event-join text-center mt-2">
+                        <div class="page-wrapper text-center mt-2">
+                            <button type="button" class="btn btn-normal trigger1">축하해요!</button>
+                            <button type="button" class="btn btn-normal trigger2">사랑해요!</button>
+                            <button type="button" class="btn btn-normal trigger3">감사해요!</button>
+                            <button type="button" class="btn btn-normal trigger4">건강하세요!</button>
+                        </div>
+
+                        <!-- Modal1 생일 축하해요! -->
+                        <!-- <div id="modal-wrapper1" class="modal-wrapper">
+                            <div class="modal container-fluid">
+                                <div class="head">
+                                    <a class="btn-close trigger1" href="#">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="eventM1">   
+                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                                        <button type="button" class="btn btn-outline-dark btn-event mt-1" onclick="kakaoEventM11();"><img class="event-img" src="./image/eventM11.png" alt=""></button>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();"><img class="event-img" src="./image/eventM12.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Modal2 사랑해요! -->
+                        <!-- <div id="modal-wrapper2" class="modal-wrapper">
+                            <div class="modal container-fluid">
+                                <div class="head">
+                                    <a class="btn-close trigger2" href="#">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="eventM2">
+                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();"><img class="event-img" src="./image/eventM21.png" alt=""></button>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();"><img class="event-img" src="./image/eventM22.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Modal3 감사해요! -->
+                        <!-- <div id="modal-wrapper3" class="modal-wrapper">
+                            <div class="modal container-fluid">
+                                <div class="head">
+                                    <a class="btn-close trigger3" href="#">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="eventM3">
+                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();"><img class="event-img" src="./image/eventM31.png" alt=""></button>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();"><img class="event-img" src="./image/eventM32.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Modal4 건강하세요! -->
+                        <!-- <div id="modal-wrapper4" class="modal-wrapper">
+                            <div class="modal container-fluid">
+                                <div class="head">
+                                    <a class="btn-close trigger4" href="#">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="eventM4">
+                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();"><img class="event-img" src="./image/eventM41.png" alt=""></button>
+                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();"><img class="event-img" src="./image/eventM42.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -263,7 +263,7 @@
 
         <script type="text/javascript" src="./js/question.js"></script>
         <script type="text/javascript" src="./js/solution.js"></script>
-        <script type="text/javascript" >
+        <script type="text/javascript">
             $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
             $(".result").hide();
 
@@ -276,43 +276,13 @@
             }
 
             function result(){
-                var name = localStorage.getItem("name");
                 var sex = localStorage.getItem("sex");
                 var age = localStorage.getItem("age");
-                var category = localStorage.getItem("category");
+                var life = localStorage.getItem("life");
 
-                $(".name").html(name);
                 $(".sex").html(sex);
                 $(".age").html(age);
-                $(".category").html(category);
-
-                if(category == "눈"){
-                    $("#result-category-products").attr("src", "image/"+c2.products);
-                }
-                else if(category == "두뇌 활동"){
-                    $("#result-category-products").attr("src", "image/"+c3.products);
-                }
-                else if(category == "피로/간"){
-                    $("#result-category-products").attr("src", "image/"+c4.products);
-                }
-                else if(category == "체지방/운동능력"){
-                    $("#result-category-products").attr("src", "image/"+c5.products);
-                }
-                else if(category == "피부 관리"){
-                    $("#result-category-products").attr("src", "image/"+c6.products);
-                }
-                else if(category == "뼈/관절"){
-                    $("#result-category-products").attr("src", "image/"+c7.products);
-                }
-                else if(category == "여성 건강(갱년기)"){
-                    $("#result-category-products").attr("src", "image/"+c8.products);
-                }
-                else if(category == "면역/항산화"){
-                    $("#result-category-products").attr("src", "image/"+c9.products);
-                }
-                else{
-                    $("#result-category-products").attr("src", "image/"+c1.products);
-                }
+                $(".life").html(life);
             }
 
             function btnNext(){
@@ -322,34 +292,18 @@
             }
 
             function answerCheck(){
-                if(num == 1){
-                    var result = $("input[type=text]").val();
-                    if(!result){
-                        $(".survey-errormsg").attr("style", "display: ");
-                    }
-                    else{
-                        btnNext();
-                    }
+                if($("input:radio[name='question-answer']").is(":checked") == false){
+                    $(".survey-errormsg").attr("style", "display: ");
                 }
-                else {
-                    if($("input:radio[name='question-answer']").is(":checked") == false){
-                        $(".survey-errormsg").attr("style", "display: ");
-                    }
-                    else{
-                        btnNext();
-                    }
-                }
+                else{btnNext();}
             }
 
             $("#btn-next").click(function() {
-                if(num < 6){
-                    answerCheck();
-                }
-
-                if(num == 6){
-                        $(".survey").hide();
-                        $(".result").show();
-                        result();
+                if(num < 5){answerCheck();}
+                if(num == 5){
+                    $(".survey").hide();
+                    $(".result").show();
+                    result();
                 }
             });
 
@@ -359,84 +313,46 @@
                 num++;
             }
 
-            function recommendCategory(){
+            function groupSelection(){
                 var age = localStorage.getItem("age");
                 var sex = localStorage.getItem("sex");
-                var category = "";
+                var group = "";
 
-                if(age == "청소년(10대)"){
-                    category = "A1MF";
-                }
-                else if(age == "청년(20-30대)"){
-                    category = "A2MF";
-                }
+                if(age == "청년(20-30대)"){group = "A1MF"}
                 else if(age == "중장년(40-50대)"){
-                    if(sex == "남성"){
-                        category = "A3M"
-                    }
-
-                    if(sex == "여성"){
-                        category = "A3F"
-                    } 
+                    if(sex == "남성"){group = "A2M"}
+                    if(sex == "여성"){group = "A2F"} 
                 }
-                else {
-                    category = "A4MF"
-                }
-
-                return category
+                else {group = "A3MF"}
+                return group
             }
 
             function visibility(){
                 var x = q[num]["selectionNum"];
 
-                if(x==0){
-                    $(".question-answer-selection").attr("style", "display: none");
+                if(x == 2){
+                    $("#C").attr("style", "display: none");
+                    $("#D").attr("style", "display: none");
+                    $("#E").attr("style", "display: none");
                 }
-
-                else{
-                    $(".question-answer-input").attr("style", "display: none");
-                    $(".question-answer-selection").attr("style", "display: ");
-
-                    if(x == 2){
-                        $("#C").attr("style", "display: none");
-                        $("#D").attr("style", "display: none");
-                        $("#E").attr("style", "display: none");
-                    }
-
-                    if(x == 3){
-                        $("#C").attr("style", "display: ");
-                        $("#D").attr("style", "display: none");
-                        $("#E").attr("style", "display: none");
-                    }
-
-                    if(x == 4){
-                        $("#C").attr("style", "display: ");
-                        $("#D").attr("style", "display: ");
-                        $("#E").attr("style", "display: none");
-                    }
-
-                    if(x == 5){
-                        $("#C").attr("style", "display: ");
-                        $("#D").attr("style", "display: ");
-                        $("#E").attr("style", "display: ");
-                    }
+                if(x == 3){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: none");
+                    $("#E").attr("style", "display: none");
+                }
+                if(x == 5){
+                    $("#C").attr("style", "display: ");
+                    $("#D").attr("style", "display: ");
+                    $("#E").attr("style", "display: ");
                 }
             }
 
             function next(){
-                // 프로그레스 바 진행 현황 변경
-                $("#survey-progress-rate").attr("style", "width:calc(100/5*"+num+"%)");
-                
+                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)"); // 프로그레스 바 진행 현황 변경
                 $("#qNum").text("질문 "+num);
 
-                if(num == 1){
+                if(num < 5){
                     $("#qTitle").html(q[num]["title"]);
-                    visibility();
-                }
-
-                if(num == 2 || num == 3 || num == 5){
-                    $("#qTitle").html(q[num]["title"]);
-                    $("#qSubTitle").attr("style", "display: none");
 
                     $("#selection1").html(q[num]["A"]);
                     $("#selection2").html(q[num]["B"]);
@@ -446,160 +362,21 @@
 
                     visibility();
                 }
-
-                if(num==4){
-                    var receiver = localStorage.getItem("name");
-                    $("#qTitle").html(receiver + "님께 " + q[num]["title"]);
-
-                    var sex = localStorage.getItem("sex");
-                    var age = localStorage.getItem("age");
-                    $(".sex").html(sex);
-                    $(".age").html(age);
-                    $("#qSubTitle").attr("style", "display: ");
-
-                    var division = recommendCategory();
-
-                    q[num]["selectionNum"] = category[division]["answerNum"]
-
-                    $("#selection1").html(category[division]["W1"]);
-                    $("#selection2").html(category[division]["W2"]);
-                    $("#selection3").html(category[division]["W3"]);
-                    $("#selection4").html(category[division]["W4"]);
-                    $("#selection5").html(category[division]["W5"]);
-
-                    visibility();
-                }
             }
 
             function saveAnswer(){
                 var key = q[num]["question-type"];
 
-                if(num == 1){
-                    var receiver = $(".name").val();
-                    localStorage.setItem(key, receiver);
-                }
-                else{
-                    if($("input:radio[name='question-answer']").is(":checked")){
-                        var radioID = $("input[name='question-answer']:checked").val();
-                        var radioNm = $("label[for='"+radioID+"']").text();
-                        localStorage.setItem(key, radioNm);
-                    }
+                if($("input:radio[name='question-answer']").is(":checked")){
+                    var radioID = $("input[name='question-answer']:checked").val();
+                    var radioNm = $("label[for='"+radioID+"']").text();
+                    localStorage.setItem(key, radioNm);
                 }
             }    
 
 
             function goPurchase(){
-                let giftCategory = localStorage.getItem("category");
                 let giftPrice = localStorage.getItem("price");
-
-                if(giftCategory == "눈"){
-                    if(giftPrice == "전체"){
-                        location.href = c2.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c2.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c2.L;
-                    }  
-                }
-                
-                else if(giftCategory == "두뇌 활동"){
-                    if(giftPrice == "전체"){
-                        location.href = c3.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c3.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c3.L;
-                    }  
-                }
-
-                else if(giftCategory == "피로/간"){
-                    if(giftPrice == "전체"){
-                        location.href = c4.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c4.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c4.L;
-                    }  
-                }
-
-                else if(giftCategory == "체지방/운동능력"){
-                    if(giftPrice == "전체"){
-                        location.href = c5.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c5.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c5.L;
-                    }  
-                }
-
-                else if(giftCategory == "피부 관리"){
-                    if(giftPrice == "전체"){
-                        location.href = c6.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c6.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c6.L;
-                    }  
-                }
-
-                else if(giftCategory == "뼈/관절"){
-                    if(giftPrice == "전체"){
-                        location.href = c7.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c7.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c7.L;
-                    }  
-                }
-
-                else if(giftCategory == "여성 건강(갱년기)"){
-                    if(giftPrice == "전체"){
-                        location.href = c8.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c8.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c8.L;
-                    }  
-                }
-
-                else if(giftCategory == "치아/잇몸"){
-                    if(giftPrice == "전체"){
-                        location.href = c9.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c9.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c9.L;
-                    }  
-                }
-                
-                else{
-                    console.log(c1);
-                    if(giftPrice == "전체"){
-                        location.href = c1.T;
-                    }
-                    if(giftPrice == "10만원 이상"){
-                        // location.href = c1.H;
-                    }
-                    if(giftPrice == "10만원 미만"){
-                        // location.href = c1.L;
-                    }
-                }
             }
         </script>
         <script type="text/javascript">
@@ -635,7 +412,6 @@
         </script>
 
         <!-- 카카오 메시지 API 관련 -->
-        <!-- 내용 변경 필요 -->
         <script type="text/javascript">
             // 생일 축하해요!
             const kakaoEventM11 = () => {

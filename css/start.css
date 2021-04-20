@@ -1,3 +1,13 @@
 .start {
     margin: 0 auto;
 }
+
+.survey-start {
+    margin: 0 auto;
+}
+
+#btn-start {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
