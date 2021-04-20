@@ -1,0 +1,181 @@
+<!-- 카카오 메시지 API 사용을 위한 설정 -->
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script> Kakao.init('cfc81e62495a8be34ee51bcc44f563bf'); </script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).bind('keydown',function(e){
+            if ( e.keyCode == 123) {
+                e.preventDefault();
+                e.returnValue = false;
+            }
+        });
+    });
+
+    document.onmousedown=disableclick;
+
+    function disableclick(event){
+        if (event.button==2) {
+            return false;
+        }
+    }
+</script>
+
+
+
+<div class="result-event text-center mt-5">
+    <div class="result-event-join text-center mt-2">
+        <div class="page-wrapper text-center mt-2">
+            <button type="button" class="btn btn-normal trigger1">축하해요!</button>
+            <button type="button" class="btn btn-normal trigger2">사랑해요!</button>
+            <button type="button" class="btn btn-normal trigger3">감사해요!</button>
+            <button type="button" class="btn btn-normal trigger4">건강하세요!</button>
+        </div>
+
+        <!-- Modal1 생일 축하해요! -->
+        <!-- <div id="modal-wrapper1" class="modal-wrapper">
+            <div class="modal container-fluid">
+                <div class="head">
+                    <a class="btn-close trigger1" href="#">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="eventM1">   
+                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                        <button type="button" class="btn btn-outline-dark btn-event mt-1" onclick="kakaoEventM11();"><img class="event-img" src="./image/eventM11.png" alt=""></button>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();"><img class="event-img" src="./image/eventM12.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Modal2 사랑해요! -->
+        <!-- <div id="modal-wrapper2" class="modal-wrapper">
+            <div class="modal container-fluid">
+                <div class="head">
+                    <a class="btn-close trigger2" href="#">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="eventM2">
+                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();"><img class="event-img" src="./image/eventM21.png" alt=""></button>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();"><img class="event-img" src="./image/eventM22.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Modal3 감사해요! -->
+        <!-- <div id="modal-wrapper3" class="modal-wrapper">
+            <div class="modal container-fluid">
+                <div class="head">
+                    <a class="btn-close trigger3" href="#">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="eventM3">
+                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();"><img class="event-img" src="./image/eventM31.png" alt=""></button>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();"><img class="event-img" src="./image/eventM32.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Modal4 건강하세요! -->
+        <!-- <div id="modal-wrapper4" class="modal-wrapper">
+            <div class="modal container-fluid">
+                <div class="head">
+                    <a class="btn-close trigger4" href="#">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="eventM4">
+                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();"><img class="event-img" src="./image/eventM41.png" alt=""></button>
+                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();"><img class="event-img" src="./image/eventM42.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $('.trigger1').on('click', function() {
+            $('#modal-wrapper1').toggleClass('open');
+            $('.page-wrapper').toggleClass('blur-it');
+            
+            return false;
+        });
+
+        $('.trigger2').on('click', function() {
+            $('#modal-wrapper2').toggleClass('open');
+            $('.page-wrapper').toggleClass('blur-it');
+            
+            return false;
+        });
+
+        $('.trigger3').on('click', function() {
+            $('#modal-wrapper3').toggleClass('open');
+            $('.page-wrapper').toggleClass('blur-it');
+            
+            return false;
+        });
+
+        $('.trigger4').on('click', function() {
+            $('#modal-wrapper4').toggleClass('open');
+            $('.page-wrapper').toggleClass('blur-it');
+            
+            return false;
+        });
+    });
+</script>
+
+<!-- 카카오 메시지 API 관련 -->
+<script type="text/javascript">
+    // 생일 축하해요!
+    const kakaoEventM11 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51523")});
+        return false;
+    }
+    const kakaoEventM12 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51702")});
+        return false;
+    }
+
+    // 사랑해요!
+    const kakaoEventM21 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51703")});
+        return false;
+    }
+    const kakaoEventM22 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51704")});
+        return false;
+    }
+
+    // 감사해요!
+    const kakaoEventM31 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51705")});
+        return false;
+    }
+    const kakaoEventM32 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51706")});
+        return false;
+    }
+
+    // 건강하세요!
+    const kakaoEventM41 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51707")});
+        return false;
+    }
+    const kakaoEventM42 = () => {
+        Kakao.Link.sendCustom({templateId: Number("51708")});
+        return false;
+    }
+</script>

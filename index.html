@@ -1,7 +1,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="author" content="이랜드 ESI(외식, 바이오&헬스케어)">
         <!-- 본 웹에 대한 설명 -->
         <meta name="keywords" content=""/>
@@ -26,28 +26,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
-        <!-- 카카오 메시지 API 사용을 위한 설정 -->
-        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <script> Kakao.init('cfc81e62495a8be34ee51bcc44f563bf'); </script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $(document).bind('keydown',function(e){
-                    if ( e.keyCode == 123) {
-                        e.preventDefault();
-                        e.returnValue = false;
-                    }
-                });
-            });
-    
-            document.onmousedown=disableclick;
-    
-            function disableclick(event){
-                if (event.button==2) {
-                    return false;
-                }
-            }
-        </script>
     </head>
 
     <body class="container-md">
@@ -128,135 +106,98 @@
                         <span style="color: #3A5FCB"><b>맞춤 상품</b></span>이 준비되어 있어요!
                     </h2>
                 </div>
-                <div class="category-card mt-5">
-                    <div class="card mt-2">
-                        <img src="./image/banner/003.png" class="card-img-top" alt="card1">
-                        <div class="card-body">
-                            <h5 class="card-title">면역력 증진</h5>
-                            <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+
+                <div class="container-fluid mt-5">
+                    <div class="category-card card-group scrolling-wrapper row flex-row flex-nowrap mb-3">
+                        <div id="categoryA" class="col category-fixed">
+                            <div class="card card-block mt-2" style="width: 20rem;">
+                                <img src="./image/banner/003.png" class="card-img-top" alt="card1">
+                                <div class="card-body">
+                                    <h5 class="card-title">면역력 증진</h5>
+                                    <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                                    <br>
+                                    <p><b>핵심 영양성분: </b>홍삼</p>
+                                    <p><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></p>
+                                    <br>
+                                    <a href="#" class="card-link">카카오톡으로 관련 상품 바로 구매하기</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>핵심 영양성분: </b>홍삼</li>
-                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
+                        <div id="categoryB" class="col category-fixed">
+                            <div class="card card-block mt-2" style="width: 20rem;">
+                                <img src="./image/banner/005.png" class="card-img-top" alt="card2">
+                                <div class="card-body">
+                                    <h5 class="card-title">피로 회복</h5>
+                                    <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                                    <br>
+                                    <p><b>핵심 영양성분: </b>홍삼</p>
+                                    <p><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></p>
+                                    <br>
+                                    <a href="#" class="card-link">카카오톡으로 관련 상품 바로 구매하기</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card mt-2">
-                        <img src="./image/banner/005.png" class="card-img-top" alt="card2">
-                        <div class="card-body">
-                            <h5 class="card-title">피로 회복</h5>
-                            <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                        <div id="categoryC" class="col category-fixed">
+                            <div class="card card-block mt-2">
+                                <img src="./image/banner/001.png" class="card-img-top" alt="card3">
+                                <div class="card-body">
+                                    <h5 class="card-title">눈 건강</h5>
+                                    <p class="card-text">비대면 수업, 재택근무, 유튜브 시청 .. 디지털 콘텐츠 시청 시간이 늘어나면서 눈 보호가 필요해졌어요!</p>
+                                    <br>
+                                    <p><b>핵심 영양성분: </b>홍삼</p>
+                                    <p><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></p>
+                                    <br>
+                                    <a href="#" class="card-link">카카오톡으로 관련 상품 바로 구매하기</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>핵심 영양성분: </b>밀크씨슬</li>
-                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
+                        <div id="categoryD" class="col">
+                            <div class="card card-block mt-2">
+                                <!-- <img src="./image/banner/003.png" class="card-img-top" alt="card4"> -->
+                                <div class="card-body">
+                                    <h5 class="card-title">건강 카테고리</h5>
+                                    <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                                    <br>
+                                    <p><b>핵심 영양성분: </b>홍삼</p>
+                                    <p><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></p>
+                                    <br>
+                                    <a href="#" class="card-link">카카오톡으로 관련 상품 바로 구매하기</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card mt-2">
-                        <img src="./image/banner/001.png" class="card-img-top" alt="card3">
-                        <div class="card-body">
-                            <h5 class="card-title">눈 건강</h5>
-                            <p class="card-text">비대면 수업, 재택근무, 유튜브 시청 .. 디지털 콘텐츠 시청 시간이 늘어나면서 눈 보호가 필요해졌어요!</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>핵심 영양성분: </b>루테인</li>
-                            <li class="list-group-item"><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">카카오톡으로 바로 구매하기</a>
+                        <div id="categoryE" class="col">
+                            <div class="card card-block mt-2">
+                                <!-- <img src="./image/banner/003.png" class="card-img-top" alt="card5"> -->
+                                <div class="card-body">
+                                    <h5 class="card-title">건강 카테고리</h5>
+                                    <p class="card-text">라이프스타일과 연결해서 짚어주기</p>
+                                    <br>
+                                    <p><b>핵심 영양성분: </b>홍삼</p>
+                                    <p><b>추천 점수 </b><span style="color:yellowgreen;">★★★★★</span></p>
+                                    <br>
+                                    <a href="#" class="card-link">카카오톡으로 관련 상품 바로 구매하기</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="result-purchase">
-                    <button type="button" class="btn btn-lg btn-purchase mt-5" onclick="goPurchase();">전체 상품 한 눈에 보기</button>
-                </div>
-                <div class="result-event text-center mt-5">
-                    <div class="result-event-join text-center mt-2">
-                        <div class="page-wrapper text-center mt-2">
-                            <button type="button" class="btn btn-normal trigger1">축하해요!</button>
-                            <button type="button" class="btn btn-normal trigger2">사랑해요!</button>
-                            <button type="button" class="btn btn-normal trigger3">감사해요!</button>
-                            <button type="button" class="btn btn-normal trigger4">건강하세요!</button>
-                        </div>
-
-                        <!-- Modal1 생일 축하해요! -->
-                        <!-- <div id="modal-wrapper1" class="modal-wrapper">
-                            <div class="modal container-fluid">
-                                <div class="head">
-                                    <a class="btn-close trigger1" href="#">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="eventM1">   
-                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                        <button type="button" class="btn btn-outline-dark btn-event mt-1" onclick="kakaoEventM11();"><img class="event-img" src="./image/eventM11.png" alt=""></button>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM12();"><img class="event-img" src="./image/eventM12.png" alt=""></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Modal2 사랑해요! -->
-                        <!-- <div id="modal-wrapper2" class="modal-wrapper">
-                            <div class="modal container-fluid">
-                                <div class="head">
-                                    <a class="btn-close trigger2" href="#">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="eventM2">
-                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM21();"><img class="event-img" src="./image/eventM21.png" alt=""></button>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM22();"><img class="event-img" src="./image/eventM22.png" alt=""></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Modal3 감사해요! -->
-                        <!-- <div id="modal-wrapper3" class="modal-wrapper">
-                            <div class="modal container-fluid">
-                                <div class="head">
-                                    <a class="btn-close trigger3" href="#">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="eventM3">
-                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM31();"><img class="event-img" src="./image/eventM31.png" alt=""></button>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM32();"><img class="event-img" src="./image/eventM32.png" alt=""></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Modal4 건강하세요! -->
-                        <!-- <div id="modal-wrapper4" class="modal-wrapper">
-                            <div class="modal container-fluid">
-                                <div class="head">
-                                    <a class="btn-close trigger4" href="#">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="eventM4">
-                                        <span><b>마음을 표현할 상장</b>을 선택해주세요!</span>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM41();"><img class="event-img" src="./image/eventM41.png" alt=""></button>
-                                        <button type="button" class="btn btn-outline-dark btn-event" onclick="kakaoEventM42();"><img class="event-img" src="./image/eventM42.png" alt=""></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                    <button type="button" class="btn btn-lg btn-purchase mt-3" onclick="goPurchase();">전체 상품 카카오톡에서 한 눈에 보기</button>
                 </div>
             </div>
         </article>
@@ -377,80 +318,6 @@
 
             function goPurchase(){
                 let giftPrice = localStorage.getItem("price");
-            }
-        </script>
-        <script type="text/javascript">
-            $( document ).ready(function() {
-                $('.trigger1').on('click', function() {
-                    $('#modal-wrapper1').toggleClass('open');
-                    $('.page-wrapper').toggleClass('blur-it');
-                    
-                    return false;
-                });
-
-                $('.trigger2').on('click', function() {
-                    $('#modal-wrapper2').toggleClass('open');
-                    $('.page-wrapper').toggleClass('blur-it');
-                    
-                    return false;
-                });
-
-                $('.trigger3').on('click', function() {
-                    $('#modal-wrapper3').toggleClass('open');
-                    $('.page-wrapper').toggleClass('blur-it');
-                    
-                    return false;
-                });
-
-                $('.trigger4').on('click', function() {
-                    $('#modal-wrapper4').toggleClass('open');
-                    $('.page-wrapper').toggleClass('blur-it');
-                    
-                    return false;
-                });
-            });
-        </script>
-
-        <!-- 카카오 메시지 API 관련 -->
-        <script type="text/javascript">
-            // 생일 축하해요!
-            const kakaoEventM11 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51523")});
-                return false;
-            }
-            const kakaoEventM12 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51702")});
-                return false;
-            }
-
-            // 사랑해요!
-            const kakaoEventM21 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51703")});
-                return false;
-            }
-            const kakaoEventM22 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51704")});
-                return false;
-            }
-
-            // 감사해요!
-            const kakaoEventM31 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51705")});
-                return false;
-            }
-            const kakaoEventM32 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51706")});
-                return false;
-            }
-
-            // 건강하세요!
-            const kakaoEventM41 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51707")});
-                return false;
-            }
-            const kakaoEventM42 = () => {
-                Kakao.Link.sendCustom({templateId: Number("51708")});
-                return false;
             }
         </script>
     </body>
