@@ -8,7 +8,14 @@
 
 .category-card {
     margin: 0 auto;
-    /* display: */
+}
+
+.card-block{
+    width: 20rem;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.2s ease-in-out !important;
+	border-radius: 12.5px;
 }
 
 .card-title {
@@ -16,15 +23,8 @@
     color:#3A5FCB;
 }
 
-.card-block{
-	/* height: 250px; */
-    width: 20rem;
-	/* background-color: #F2F2F2; */
-	border: none;
-	background-position: center;
-	background-size: cover;
-	transition: all 0.2s ease-in-out !important;
-	/* border-radius: 24px; */
+.card-text {
+    color: grey;
 }
 
 .result-purchase {
