@@ -127,7 +127,7 @@
                                         [세트 3] 홍삼 1 + 1<br>
                                     </p>
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgl'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryA" class="col category-fixed">
@@ -139,7 +139,7 @@
                                     <p class="card-nutrient"><b>핵심 영양성분: </b>밀크씨슬, 비타민B</p>
                                     <img src="./image/product/간비.jpg" class="card-img" alt="card1">
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EdzqmGs7'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryB" class="col category-fixed">
@@ -151,7 +151,7 @@
                                     <p class="card-nutrient"><b>핵심 영양성분: </b>홍삼, 프로폴리스</p>
                                     <img src="./image/product/홍삼.jpg" class="card-img" alt="card2">
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EczcM980'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryC" class="col category-fixed">
@@ -164,7 +164,7 @@
                                     <!-- <img src="./image/product/오메가3.jpg" class="card-img" alt="card3">  -->
                                 </div>
                                 <div class="card-footer">
-                                    <!-- <button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button> -->
+                                    <!-- <button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6Ed0nQ6GL'">구매하기</button> -->
                                 </div>
                             </div>
                         </div>
@@ -177,7 +177,7 @@
                                     <p class="card-nutrient"><b>핵심 영양성분: </b>유산균</p>
                                     <img src="./image/product/프리바이오틱스.jpg" class="card-img" alt="card4">
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EcPqBQHi'">구매하기</button></div>
                             </div>
                         </div>
 
@@ -352,7 +352,9 @@
 
 
             function goPurchase(){
-                let giftPrice = localStorage.getItem("price");
+                // let giftPrice = localStorage.getItem("price");
+                var group = groupSelection();
+                location.href = card[group]["link-total"];
             }
         </script>
     </body>

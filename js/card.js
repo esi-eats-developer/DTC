@@ -7,9 +7,19 @@ var card = {
         "nutrient" : "콜라겐, 비타민C",
         "img" : "",
         "special" : "",
-        "link" : ""
+        "link" : "https://www.qualqual.co.kr/q/2xFmlwzWA",
+        "link-total" : "https://www.qualqual.co.kr/q/6Ebw45VSZ"
     },
-
+    // <!-- A2M 대상 카드 -->
+    "A2M" : {
+        "title" : "",
+        "text" : "",
+        "nutrient" : "",
+        "img" : "",
+        "special" : "",
+        "link" : "",
+        "link-total" : "https://www.qualqual.co.kr/q/6EaR1Jo0W"
+    },
     // <!-- A2F 대상 카드 -->
     "A2F" : {
         "title" : "여성 건강(갱년기)",
@@ -17,7 +27,8 @@ var card = {
         "nutrient" : "칼슘, 마그네슘",
         "img" : "",
         "special" : "",
-        "link" : ""
+        "link" : "https://www.qualqual.co.kr/q/2xF3g4Xiy",
+        "link-total" : "https://www.qualqual.co.kr/q/6Ebd9Q1Gf"
     },
     "A3MF" : {
         "title" : "뼈/관절",
@@ -25,6 +36,7 @@ var card = {
         "nutrient" : "MSM",
         "img" : "",
         "special" : "",
-        "link" : ""
+        "link" : "https://www.qualqual.co.kr/q/6EbOQmS1u",
+        "link-total" : "https://www.qualqual.co.kr/q/6EarlRF1H"
     }
 }
