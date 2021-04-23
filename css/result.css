@@ -62,8 +62,8 @@
 
 .btn-pop {
     display: inline-block;
-    margin: 0 auto;
-
+    /* margin: 0 auto; */
+    width: 45%;
     outline: 0;
 
     border-color: #3A5FCB;
