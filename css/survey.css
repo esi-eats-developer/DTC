@@ -7,6 +7,10 @@
     background-color: #3A5FCB;
 }
 
+#qSubTitle{
+    color: #3A5FCB;
+}
+
 /* 답변 파트 - 라디오 버튼 관련 디자인 */
 .question-answer-radio {
     margin: 0 auto;

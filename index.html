@@ -60,8 +60,9 @@
                     </div>
                     <div class="survey-question-contents"> <!-- 질문&답변 -->
                         <div>
-                            <h6 id="qNum" class="mt-5">질문 1</h6> <!-- 질문 번호 -->
+                            <h5 id="qNum" class="mt-5">질문 1</h5> <!-- 질문 번호 -->
                             <h3 id="qTitle" class="text-center"><p>질문</p></h3> <!-- 질문 -->
+                            <h6 id="qSubTitle" class="text-center" style="display: none;">※ 현재 5만원 미만의 상품으로만 구성되어 있습니다.</h6>
                         </div>
                         <div class="question-answer-wrap mt-5 text-center "> <!-- 답변 -->
                             <div class="question-answer-radio">
@@ -74,11 +75,11 @@
                                     <label class="form-check-label checkmark" id="selection2" for="selection2">선택 2</label>
                                 </div>
                                 <div id="C" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection3">
+                                    <input class="form-check-input mt-0" id="selection3-input" type="radio" name="question-answer" value="selection3">
                                     <label class="form-check-label checkmark" id="selection3" for="selection3">선택 3</label>
                                 </div>
                                 <div id="D" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection4">
+                                    <input class="form-check-input mt-0" id="selection4-input" type="radio" name="question-answer" value="selection4">
                                     <label class="form-check-label checkmark" id="selection4" for="selection4">선택 4</label>
                                 </div>
                                 <div id="E" class="form-check form-check-inline">
@@ -106,11 +107,9 @@
                     <h2 class="mt-2"><span style="color: #3A5FCB"><b>건강 카테고리별 필수 영양성분</b></span>이에요!</h2>
                     <p class="mt-5">
                         ※ 아래 카드를 좌우로 넘겨 자세한 정보를 확인해보세요.
-                        <br>
                         ※ '구매하기' 버튼 클릭 시, 카카오톡으로 관련 상품을 바로 구매하실 수 있습니다 :)
                     </p>
                 </div>
-
                 <div class="container-fluid">
                     <div class="category-card card-group scrolling-wrapper row flex-row flex-nowrap mb-3">
                         <div id="categoryEvent" class="col category-fixed">
@@ -320,6 +319,13 @@
 
                 if(num < 5){
                     $("#qTitle").html(q[num]["title"]);
+
+                    if(num == 4){
+                        $("#qSubTitle").attr("style", "display: ");
+                        // 가격대 선택 안 되도록 설정함
+                        $("#selection3-input").prop('disabled', true);
+                        $("#selection4-input").prop('disabled', true);
+                    }
 
                     $("#selection1").html(q[num]["A"]);
                     $("#selection2").html(q[num]["B"]);
