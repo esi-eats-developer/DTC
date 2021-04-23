@@ -9,7 +9,9 @@
 .category-card {
     margin: 0 auto;
 }
-
+.card {
+    height: 100%;   
+}
 .card-block{
     width: 20rem;
 	background-position: center;
@@ -36,6 +38,11 @@
 .card-link {
     display: block;
     width: 100%;
+}
+
+.card-footer{
+    background-color: white;
+    border: none;
 }
 
 .result-purchase {
