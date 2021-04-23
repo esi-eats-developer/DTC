@@ -26,6 +26,17 @@
 .card-text {
     color: grey;
 }
+.card-img {
+    width: 15rem;
+    height: 15rem;
+    display: block; 
+    margin: 0px auto;
+}
+
+.card-link {
+    display: block;
+    width: 100%;
+}
 
 .result-purchase {
     text-align: center;
