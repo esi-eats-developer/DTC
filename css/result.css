@@ -59,3 +59,14 @@
     color: 	#3A5FCB;
     background-color: white;
 }
+
+.btn-pop {
+    display: inline-block;
+    margin: 0 auto;
+
+    outline: 0;
+
+    border-color: #3A5FCB;
+    color: 	#3A5FCB;
+    background-color: white;
+}
