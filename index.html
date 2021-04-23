@@ -190,7 +190,7 @@
                                     <p id="Ecard-nutrient"><b>핵심 영양성분: </b></p>
                                     <img id="Ecard-img" src="" alt="card5">
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href=''">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius">구매하기</button></div>
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
                     $("#Ecard-link").attr("style", "display: none");
                 }
                 else{
-                    $("Ecard-link").attr("onclick", "'location.href=" + card[group]["link"] +"'");
+                    $("#Ecard-link").attr("onclick","location.href='" + card[group]["link"] + "'");
                 }
             }
 
@@ -317,7 +317,7 @@
             }
 
             function next(){
-                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)"); // 프로그레스 바 진행 현황 변경
+                $("#survey-progress-rate").attr("style", "width:calc(100/4*"+num+"%)");
                 $("#qNum").text("질문 "+num);
 
                 if(num < 5){
@@ -352,7 +352,6 @@
 
 
             function goPurchase(){
-                // let giftPrice = localStorage.getItem("price");
                 var group = groupSelection();
                 location.href = card[group]["link-total"];
             }
