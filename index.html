@@ -87,24 +87,24 @@
                         <div class="question-answer-wrap mt-5 text-center "> <!-- 답변 -->
                             <div class="question-answer-radio">
                                 <div id="A" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection1">
-                                    <label class="form-check-label checkmark" id="selection1" for="selection1">선택 1</label>
+                                    <input class="form-check-input mt-0" id="selection1" type="radio" name="question-answer" value="selection1">
+                                    <label class="form-check-label" id="radio1" for="selection1">선택 1</label>
                                 </div>
                                 <div id="B" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection2">
-                                    <label class="form-check-label checkmark" id="selection2" for="selection2">선택 2</label>
+                                    <input class="form-check-input mt-0" id="selection2" type="radio" name="question-answer" value="selection2">
+                                    <label class="form-check-label" id="radio2" for="selection2">선택 2</label>
                                 </div>
                                 <div id="C" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" id="selection3-input" type="radio" name="question-answer" value="selection3">
-                                    <label class="form-check-label checkmark" id="selection3" for="selection3">선택 3</label>
+                                    <input class="form-check-input mt-0" id="selection3" type="radio" name="question-answer" value="selection3">
+                                    <label class="form-check-label" id="radio3" for="selection3">선택 3</label>
                                 </div>
                                 <div id="D" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" id="selection4-input" type="radio" name="question-answer" value="selection4">
-                                    <label class="form-check-label checkmark" id="selection4" for="selection4">선택 4</label>
+                                    <input class="form-check-input mt-0" id="selection4" type="radio" name="question-answer" value="selection4">
+                                    <label class="form-check-label" id="radio4" for="selection4">선택 4</label>
                                 </div>
                                 <div id="E" class="form-check form-check-inline">
-                                    <input class="form-check-input mt-0" type="radio" name="question-answer" value="selection5">
-                                    <label class="form-check-label checkmark" id="selection5" for="selection5">선택 5</label>
+                                    <input class="form-check-input mt-0" id="selection5" type="radio" name="question-answer" value="selection5">
+                                    <label class="form-check-label" id="radio5" for="selection5">선택 5</label>
                                 </div>
                             </div>
                         </div>
@@ -430,15 +430,15 @@
                     if(num == 4){
                         $("#qSubTitle").attr("style", "display: ");
                         // 가격대 선택 안 되도록 설정함
-                        $("#selection3-input").prop('disabled', true);
-                        $("#selection4-input").prop('disabled', true);
+                        $("#selection3").prop('disabled', true);
+                        $("#selection4").prop('disabled', true);
                     }
 
-                    $("#selection1").html(q[num]["A"]);
-                    $("#selection2").html(q[num]["B"]);
-                    $("#selection3").html(q[num]["C"]);
-                    $("#selection4").html(q[num]["D"]);
-                    $("#selection5").html(q[num]["E"]);
+                    $("#radio1").html(q[num]["A"]);
+                    $("#radio2").html(q[num]["B"]);
+                    $("#radio3").html(q[num]["C"]);
+                    $("#radio4").html(q[num]["D"]);
+                    $("#radio5").html(q[num]["E"]);
 
                     visibility();
                 }
