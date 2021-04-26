@@ -3,9 +3,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="author" content="이랜드 ESI(외식, 바이오&헬스케어)">
+        
         <!-- 본 웹에 대한 설명 -->
         <meta name="keywords" content=""/>
         <meta name="description" content=""> 
+
         <!-- 링크 공유 시 보여지는 내용 설정 -->
         <meta property="og:type" content="website"> 
         <meta property="og:title" content="">
@@ -24,37 +26,17 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
         <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
         <script>Kakao.init('cfc81e62495a8be34ee51bcc44f563bf');</script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $(document).bind('keydown',function(e){
-                    if ( e.keyCode == 123) {
-                        e.preventDefault();
-                        e.returnValue = false;
-                    }
-                });
-            });
-    
-            document.onmousedown=disableclick;
-    
-            function disableclick(event){
-                if (event.button==2) {
-                    return false;
-                }
-            }
-        </script>
     </head>
 
     <body class="container-md">
-        <article class="start container-md mt-5"> <!-- 설문 시작 전 메인 페이지 -->
+        <article class="start container-md mt-5">
             <div class="survey-start">
                 <div class="start-header">
-                    <!-- 로고 삽입 가능 -->
-                    <!-- <span class="icon"></span> -->
                     <h2><b style="color: #3A5FCB">건강기능식품<br>큐레이션 서비스</b></h2>
                 </div>
                 <div class="start-info mt-5">
@@ -73,19 +55,19 @@
             </div>
         </article>
 
-        <article class="survey container-md mt-5"> <!-- 설문 페이지 -->
+        <article class="survey container-md mt-5">
             <div class="survey-contents">
                 <div class="survey-test">
-                    <div class="progress survey-progress"> <!-- 프로그레스바 -->
+                    <div class="progress survey-progress">
                         <div id="survey-progress-rate" class="progress-bar" role="progressbar" style="width: calc(100/4*1%);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="survey-question-contents"> <!-- 질문&답변 -->
+                    <div class="survey-question-contents">
                         <div>
-                            <h5 id="qNum" class="mt-5">질문 1</h5> <!-- 질문 번호 -->
-                            <h3 id="qTitle" class="text-center"><p>질문</p></h3> <!-- 질문 -->
+                            <h5 id="qNum" class="mt-5">질문 1</h5>
+                            <h3 id="qTitle" class="text-center"><p>질문</p></h3> 
                             <h6 id="qSubTitle" class="text-center" style="display: none;">※ 현재 5만원 미만의 상품으로만 구성되어 있습니다.</h6>
                         </div>
-                        <div class="question-answer-wrap mt-5 text-center "> <!-- 답변 -->
+                        <div class="question-answer-wrap mt-5 text-center ">
                             <div class="question-answer-radio">
                                 <div id="A" class="form-check form-check-inline">
                                     <input class="form-check-input mt-0" id="selection1" type="radio" name="question-answer" value="selection1">
@@ -118,7 +100,7 @@
             </div>
         </article>
 
-        <article class="result container-md"> <!--  결과 페이지 -->
+        <article class="result container-md">
             <div class="result-content">
                 <div class="result-info mt-5">
                     <h5>
@@ -151,7 +133,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgl'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryA" class="col category-fixed">
+                        <div id="categoryA" class="col category-fixed"> <!-- 피로 회복 -->
                             <div class="card card-block mt-2" style="width: 20rem;" >
                                 <div class="card-body">
                                     <h5 class="card-title">피로 회복</h5>
@@ -163,7 +145,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EdzqmGs7'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryB" class="col category-fixed">
+                        <div id="categoryB" class="col category-fixed"> <!-- 면역력 증진 -->
                             <div class="card card-block mt-2" style="width: 20rem;">
                                 <div class="card-body">
                                     <h5 class="card-title">면역력 증진</h5>
@@ -175,7 +157,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EczcM980'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryC" class="col category-fixed">
+                        <div id="categoryC" class="col category-fixed"> <!-- 눈 건강 -->
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 class="card-title">눈 건강</h5>
@@ -189,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="categoryD" class="col">
+                        <div id="categoryD" class="col"> <!-- 장 건강 -->
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 class="card-title">장 건강</h5>
@@ -201,8 +183,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EcPqBQHi'">구매하기</button></div>
                             </div>
                         </div>
-                        <!-- 큐레이션 파트 -->
-                        <div id="categoryE" class="col">
+                        <div id="categoryE" class="col"> <!-- 큐레이션 파트 -->
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 id="Ecard-title" class="card-title">건강 카테고리</h5>
@@ -219,7 +200,7 @@
                 <div class="result-purchase">
                     <button type="button" class="btn btn-lg btn-purchase mt-3 mb-5" onclick="goPurchase();">카카오톡에서 전체 상품 한 눈에 보기</button>
                 </div>
-                <div class="result-event text-center">
+                <div class="result-event text-center"> <!-- 감사 인사 파트 -->
                     <div class="result-event-join text-center mt-2">
                         <h6>
                             <b style="color:#3A5FCB;">잠깐!</b><br>
@@ -227,7 +208,7 @@
                             <br>
                             저희가 센스있는 멘트는 준비해뒀어요!!
                         </h6>
-                        <div class="page-wrapper text-center mt-2">
+                        <div class="page-wrapper text-center mt-2"> 
                             <div>
                                 <button type="button" class="btn btn-pop trigger1">축하해요!</button>
                                 <button type="button" class="btn btn-pop trigger2">사랑해요!</button>
@@ -464,9 +445,7 @@
                 location.href = card[group]["link-total"];
             }
         </script>
-        <!-- 레이어 팝업 -->
-        <!-- 카카오 메시지 API 관련 -->
-        <script type="text/javascript">
+        <script type="text/javascript"> // 레이어 팝업
             $( document ).ready(function() {
                 $('.trigger1').on('click', function() {
                     $('#modal-wrapper1').toggleClass('open');
@@ -494,7 +473,7 @@
                 });
             });
         </script>
-        <script type="text/javascript">
+        <script type="text/javascript"> // 카카오 메시지 API
             // 생일 축하해요!
             const kakaoEventM11 = () => {
                 Kakao.Link.sendCustom({templateId: Number("51523")});
