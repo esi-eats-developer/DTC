@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\DTCGift"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DTC"
+	}
+}
