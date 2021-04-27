@@ -133,7 +133,7 @@
                                         <b>[세트 3] </b>홍삼 1 + 1 <u>39,000원</u><br>
                                     </p>
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgl'">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgI'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryA" class="col category-fixed"> <!-- 피로 회복 -->
@@ -190,12 +190,12 @@
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 id="Ecard-title" class="card-title">건강 카테고리</h5>
-                                    <p id="Ecard-special" style="color:yellowgreen; font-weight: bolder;">추가 설명/특이사항</p>
-                                    <p id="Ecard-text">라이프스타일과 연관된 설명</p>
-                                    <p id="Ecard-nutrient"><b>핵심 영양성분: </b></p>
-                                    <img id="Ecard-img" src="" alt="card5">
+                                    <p id="Ecard-special" class="card-special" style="color:yellowgreen; font-weight: bolder;">추가 설명/특이사항</p>
+                                    <p id="Ecard-text" class="card-text">라이프스타일과 연관된 설명</p>
+                                    <p id="Ecard-nutrient" class="card-nutrient"><b>핵심 영양성분: </b></p>
+                                    <img id="Ecard-img" class="card-img" src="" alt="card5">
                                 </div>
-                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius">구매하기</button></div>
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="goCuration();">구매하기</button></div>
                             </div>
                         </div>
                     </div>
@@ -327,9 +327,14 @@
                 if(card[group]["link"]==""){
                     $("#Ecard-link").attr("style", "display: none");
                 }
-                else{
-                    $("#Ecard-link").attr("onclick","location.href='" + card[group]["link"] + "'");
-                }
+                // else{
+                //     $("#Ecard-link").attr("onclick","'location.href='" + card[group]["link"] + "''");
+                // }
+            }
+            
+            function goCuration(){
+                var group = groupSelection();
+                location.href = card[group]["link"];
             }
 
             function result(){
