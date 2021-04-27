@@ -7,7 +7,8 @@ var card = {
         "nutrient" : "콜라겐, 비타민C",
         "img" : "",
         "special" : "",
-        "link" : "https://www.qualqual.co.kr/q/2xFmlwzWA",
+        "link" : "",
+        // https://www.qualqual.co.kr/q/2xFmlwzWA
         "link-total" : "https://www.qualqual.co.kr/q/6Ebw45VSZ"
     },
     // <!-- A2M 대상 카드 -->
@@ -27,7 +28,8 @@ var card = {
         "nutrient" : "칼슘, 마그네슘",
         "img" : "",
         "special" : "",
-        "link" : "https://www.qualqual.co.kr/q/2xF3g4Xiy",
+        "link" : "",
+        // https://www.qualqual.co.kr/q/2xF3g4Xiy
         "link-total" : "https://www.qualqual.co.kr/q/6Ebd9Q1Gf"
     },
     "A3MF" : {
@@ -36,7 +38,8 @@ var card = {
         "nutrient" : "MSM",
         "img" : "",
         "special" : "",
-        "link" : "https://www.qualqual.co.kr/q/6EbOQmS1u",
+        "link" : "",
+        // https://www.qualqual.co.kr/q/6EbOQmS1u
         "link-total" : "https://www.qualqual.co.kr/q/6EarlRF1H"
     }
 }
