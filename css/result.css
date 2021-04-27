@@ -36,6 +36,13 @@
     margin: 0px auto;
 }
 
+.card-special-img {
+    width: 12.5rem;
+    height: 12.5rem;
+    display: block; 
+    margin: 0px auto;
+}
+
 .card-link {
     display: block;
     width: 100%;
