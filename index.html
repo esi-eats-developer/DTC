@@ -65,7 +65,7 @@
                         <div>
                             <h5 id="qNum" class="mt-5">질문 1</h5>
                             <h3 id="qTitle" class="text-center"><p>질문</p></h3> 
-                            <h6 id="qSubTitle" class="text-center" style="display: none;">※ 현재 5만원 미만의 상품으로만 구성되어 있습니다.</h6>
+                            <h6 id="qSubTitle" class="text-center" style="display: none;">※ 현재 가격대 선택이 어렵습니다. 전체를 선택해주세요 :)</h6>
                         </div>
                         <div class="question-answer-wrap mt-5 text-center ">
                             <div class="question-answer-radio">
@@ -121,19 +121,20 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color:#DE142F;">★최대 50% 할인★<br>가정의 달 선물용 맞춤 세트</h5>
                                     <p><b>행사 기간: </b>4/28(수)-5/4(화)</p>
-                                    <p class="card-text">
-                                        <!-- 5월 가정의 달 맞이 선물용 특별 세트 구성!  -->
+                                    <!-- <p class="card-text">
+                                        5월 가정의 달 맞이 선물용 특별 세트 구성! 
                                         연령/성별 불문 꼭 필요한 영양성분만 담았어요!
-                                    </p>
+                                    </p> -->
                                     <img src="./image/special.jpg" class="card-img card-special-img" alt="card-special-img">
                                     <br>
                                     <p class="card-text" style="color: black;">
-                                        <b>[세트 1] </b>밀크씨슬 + 유산균 <u>28,300원</u><br>
-                                        <b>[세트 2] </b>홍삼 + 유산균 <u>38,700원</u><br>
+                                        <b>[세트 1] </b>밀크씨슬 + 유산균 <u>38,700원</u><br>
+                                        <b>[세트 2] </b>홍삼 + 유산균 <u>28,300원</u><br>
                                         <b>[세트 3] </b>홍삼 1 + 1 <u>39,000원</u><br>
+                                        <b>[세트 4] </b>홍삼 + 밀크씨슬 + 유산균 <u>57,000원</u><br>
                                     </p>
                                 </div>
-                                <!-- <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgI'">구매하기</button></div> -->
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgI'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryA" class="col category-fixed"> <!-- 피로 회복 -->
@@ -152,12 +153,12 @@
                             <div class="card card-block mt-2" style="width: 20rem;">
                                 <div class="card-body">
                                     <h5 class="card-title">면역력 증진</h5>
-                                    <p class="card-special" style="color:yellowgreen; font-weight: bolder;">※ 어버이날 맞이 특별 선물 포장!</p>
+                                    <p class="card-special" style="color:yellowgreen; font-weight: bolder;">※ 약사신협 홍삼, 어버이날 맞이 특별 선물 포장!</p>
                                     <p class="card-text">끝이 보이지 않는 팬더믹. 면역력 관리는 선택이 아닌 필수!</p>
                                     <p class="card-nutrient"><b>핵심 영양성분: </b>홍삼, 프로폴리스</p>
                                     <img src="./image/product/홍삼.jpg" class="card-img" alt="card2">
                                 </div>
-                                <!-- <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EczcM980'">구매하기</button></div> -->
+                                <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EczcM980'">구매하기</button></div>
                             </div>
                         </div>
                         <div id="categoryC" class="col category-fixed"> <!-- 눈 건강 -->
@@ -423,6 +424,8 @@
                     if(num == 4){
                         $("#qSubTitle").attr("style", "display: ");
                         // 가격대 선택 안 되도록 설정함
+                        $("#selection1").prop('disabled', true);
+                        $("#selection2").prop('disabled', true);
                         $("#selection3").prop('disabled', true);
                         $("#selection4").prop('disabled', true);
                     }
