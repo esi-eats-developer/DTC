@@ -32,7 +32,6 @@
         <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
         <script>Kakao.init('cfc81e62495a8be34ee51bcc44f563bf');</script>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-629LT7GJHS"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -131,10 +130,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color:#DE142F;">★최대 50% 할인★<br>가정의 달 선물용 맞춤 세트</h5>
                                     <p><b>행사 기간: </b>4/28(수)-5/4(화)</p>
-                                    <!-- <p class="card-text">
-                                        5월 가정의 달 맞이 선물용 특별 세트 구성! 
-                                        연령/성별 불문 꼭 필요한 영양성분만 담았어요!
-                                    </p> -->
                                     <img src="./image/special.jpg" class="card-img card-special-img" alt="card-special-img">
                                     <br>
                                     <p class="card-text" style="color: black;">
@@ -147,7 +142,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6E9cU9zgI'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryA" class="col category-fixed"> <!-- 피로 회복 -->
+                        <div id="categoryA" class="col category-fixed">
                             <div class="card card-block mt-2" style="width: 20rem;" >
                                 <div class="card-body">
                                     <h5 class="card-title">피로 회복</h5>
@@ -159,7 +154,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EdzqmGs7'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryB" class="col category-fixed"> <!-- 면역력 증진 -->
+                        <div id="categoryB" class="col category-fixed">
                             <div class="card card-block mt-2" style="width: 20rem;">
                                 <div class="card-body">
                                     <h5 class="card-title">면역력 증진</h5>
@@ -171,7 +166,7 @@
                                 <div class="card-footer"><button class="card-link btn btn-normal btn-radius" onclick="location.href='https://www.qualqual.co.kr/q/6EczcM980'">구매하기</button></div>
                             </div>
                         </div>
-                        <div id="categoryC" class="col category-fixed"> <!-- 눈 건강 -->
+                        <div id="categoryC" class="col category-fixed">
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 class="card-title">눈 건강</h5>
@@ -185,11 +180,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="categoryD" class="col"> <!-- 장 건강 -->
+                        <div id="categoryD" class="col">
                             <div class="card card-block mt-2">
                                 <div class="card-body">
                                     <h5 class="card-title">장 건강</h5>
-                                    <p class="card-special" style="color:yellowgreen; font-weight: bolder;"></p> <!-- 추가 설명 / 특이사항-->
+                                    <p class="card-special" style="color:yellowgreen; font-weight: bolder;"></p>
                                     <p class="card-text">기름지고 자극적인 배달음식 섭취가 증가하면서, 장 내 유해균 관리가 필요해졌어요!</p>
                                     <p class="card-nutrient"><b>핵심 영양성분: </b>유산균</p>
                                     <img src="./image/product/프리바이오틱스.jpg" class="card-img" alt="card4">
@@ -214,14 +209,9 @@
                 <div class="result-purchase">
                     <button type="button" class="btn btn-lg btn-purchase mt-3 mb-5" onclick="goPurchase();">카카오톡에서 전체 상품 한 눈에 보기</button>
                 </div>
-                <div class="result-event text-center"> <!-- 감사 인사 파트 -->
+                <div class="result-event text-center">
                     <div class="result-event-join text-center mt-2">
-                        <h6>
-                            <b style="color:#3A5FCB;">잠깐!</b><br>
-                            소중한 사람에게 표현 한 마디 어때요?
-                            <br>
-                            저희가 센스있는 멘트는 준비해뒀어요!!
-                        </h6>
+                        <h6><b style="color:#3A5FCB;">잠깐!</b><br>소중한 사람에게 표현 한 마디 어때요?<br>저희가 센스있는 멘트는 준비해뒀어요!!</h6>
                         <div class="page-wrapper text-center mt-2"> 
                             <div>
                                 <button type="button" class="btn btn-pop trigger1">축하해요!</button>
@@ -307,7 +297,7 @@
         <script type="text/javascript" src="./js/question.js"></script>
         <script type="text/javascript" src="./js/card.js"></script>
         <script type="text/javascript">
-            $(".survey").hide(); // 메인 페이지에 등장하지 않도록 숨김 처리
+            $(".survey").hide(); 
             $(".result").hide();
 
             var num = 1;
@@ -328,19 +318,13 @@
                 $("#Ecard-title").html(card[group]["title"]);
                 $("#Ecard-text").html(card[group]["text"]);
                 $("#Ecard-nutrient").html("<b>핵심 영양성분: </b>" + card[group]["nutrient"]);
-                if(card[group]["img"]==""){
-                    $("#Ecard-img").attr("style", "display: none");
-                }
-                else{
-                    $("#Ecard-img").attr("src", "./image/"+card[group]["img"]);
-                }
+                
+                if(card[group]["img"]==""){$("#Ecard-img").attr("style", "display: none");}
+                else{$("#Ecard-img").attr("src", "./image/"+card[group]["img"]);}
+
                 $("#Ecard-special").html(card[group]["special"]);
-                if(card[group]["link"]==""){
-                    $("#Ecard-link").attr("style", "display: none");
-                }
-                // else{
-                //     $("#Ecard-link").attr("onclick","'location.href='" + card[group]["link"] + "''");
-                // }
+
+                if(card[group]["link"]==""){$("#Ecard-link").attr("style", "display: none");}
             }
             
             function goCuration(){
@@ -433,7 +417,7 @@
 
                     if(num == 4){
                         $("#qSubTitle").attr("style", "display: ");
-                        // 가격대 선택 안 되도록 설정함
+
                         $("#selection2").prop('disabled', true);
                         $("#selection3").prop('disabled', true);
                         $("#selection4").prop('disabled', true);
@@ -471,25 +455,21 @@
                 $('.trigger1').on('click', function() {
                     $('#modal-wrapper1').toggleClass('open');
                     $('.page-wrapper').toggleClass('blur-it');
-                    
                     return false;
                 });
                 $('.trigger2').on('click', function() {
                     $('#modal-wrapper2').toggleClass('open');
                     $('.page-wrapper').toggleClass('blur-it');
-                    
                     return false;
                 });
                 $('.trigger3').on('click', function() {
                     $('#modal-wrapper3').toggleClass('open');
                     $('.page-wrapper').toggleClass('blur-it');
-                    
                     return false;
                 });
                 $('.trigger4').on('click', function() {
                     $('#modal-wrapper4').toggleClass('open');
                     $('.page-wrapper').toggleClass('blur-it');
-                    
                     return false;
                 });
             });
